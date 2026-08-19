@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hani, Speaking — Make Korean part of your everyday life</title>
+<meta name="description" content="Dive into Korean. Speak it naturally. Daily Korean practice with 1:1 feedback from Hani ssaem.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF4E7; --white:#FFFFFF; --gray:#F6F4F0; --brown:#4A3520;
+    --ink:#2B2622; --body:#4F4740; --muted:#6B6151; --faint:#8A8172;
+    --amber:#EBAE4A; --amber-dk:#C68A2E; --amber-lt:#F5C877; --terra:#C0512F;
+    --line:#E7D8BE; --card-line:#E3DBCC;
+    --pad:104px; --maxw:1120px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+  a{color:var(--amber-dk);text-decoration:none}
+  a:hover{color:#A96E1C}
+  img{display:block;max-width:100%}
+  h1,h2,h3,p{margin:0}
+  section{padding:var(--pad) 24px}
+  .wrap{max-width:var(--maxw);margin:0 auto}
+  .eyebrow{font-size:14px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--amber-dk)}
+  h1{font-size:60px;line-height:1.15;font-weight:800;letter-spacing:-.025em;text-wrap:balance}
+  h2{font-size:44px;line-height:1.2;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
+  h3{font-size:21px;font-weight:800}
+  .lead{font-size:22px;line-height:1.55;font-weight:500;color:var(--muted)}
+  .btn{display:inline-block;border:none;cursor:pointer;font-family:inherit;white-space:nowrap;
+    padding:18px 40px;border-radius:999px;background:var(--amber);color:#3A2C10;font-size:18px;font-weight:800;
+    box-shadow:0 14px 30px -12px rgba(214,150,50,.85);transition:transform .15s ease,box-shadow .15s ease}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 18px 36px -12px rgba(214,150,50,.95)}
+  .btn-ghost{background:transparent;box-shadow:none;color:#5B5344;font-weight:600;padding:18px 24px}
+  .btn-ghost:hover{transform:none;box-shadow:none;color:var(--ink)}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+
+  /* .ph = 사진 자리표시. README의 안내대로 img 태그로 교체하세요. */
+  .ph{width:100%;height:100%;background:#EFE4CE;border-radius:inherit;display:flex;align-items:center;
+    justify-content:center;font-size:13px;color:#A89577;text-align:center;padding:12px}
+
+  #hero{background:var(--cream)}
+  #hero .col{max-width:640px}
+  #hero .cta-row{display:flex;align-items:center;gap:18px;margin-top:40px;flex-wrap:wrap}
+
+  #story{background:var(--white);text-align:center}
+  #story .block{max-width:620px;margin:36px auto 0;display:flex;flex-direction:column;gap:26px}
+  #story .stanza{display:flex;flex-direction:column;gap:8px}
+  #story p{font-size:20px;line-height:1.6;color:var(--body)}
+  #story .close{font-weight:700;color:var(--ink)}
+  .rule{width:56px;height:2px;background:var(--line);margin:64px auto}
+
+  #principles{background:var(--gray)}
+  #principles .head{text-align:center;margin-bottom:60px}
+  #principles .head p{font-size:26px;line-height:1.35;font-weight:500;color:var(--muted)}
+  #principles .head h2{margin-top:8px}
+  .pcard{background:var(--white);border-radius:16px;padding:42px 32px;text-align:center;box-shadow:0 10px 30px -18px rgba(60,45,20,.25)}
+  .pcard .t{font-size:25px;font-weight:800;margin-bottom:16px}
+  .pcard .t span{color:var(--terra)}
+  .pcard p{font-size:17px;line-height:1.6;color:var(--muted)}
+  .pcard strong{color:var(--ink);font-weight:700}
+
+  #method{background:var(--white)}
+  #method .head{text-align:center;margin-bottom:56px}
+  #method .head h2{margin-top:16px}
+  #method .thumb{height:180px;border-radius:14px;overflow:hidden;background:#F1E7D2}
+  #method h3{margin:22px 0 10px}
+  #method p{font-size:16px;line-height:1.6;color:var(--muted)}
+
+  #products{background:var(--cream)}
+  #products .head{text-align:center;margin-bottom:56px}
+  #products .head h2{margin-top:16px}
+  .prod{background:var(--white);border-radius:18px;overflow:hidden;box-shadow:0 12px 34px -20px rgba(60,45,20,.3);display:flex;flex-direction:column}
+  .prod .shot{height:220px;background:#EBDFC6}
+  .prod .body{padding:36px 38px;display:flex;flex-direction:column;flex:1}
+  .prod h3{font-size:24px}
+  .prod .desc{margin:12px 0 22px;font-size:17px;line-height:1.6;color:var(--muted)}
+  .feats{display:flex;flex-direction:column;gap:12px}
+  .feat{display:flex;align-items:center;gap:12px;font-size:16px}
+  .tick{flex:none;width:22px;height:22px;border-radius:50%;background:var(--amber);color:#3A2C10;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .prod .btn{margin-top:26px;text-align:center;align-self:flex-start}
+
+  #contact{background:var(--brown);padding:96px 24px}
+  #contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  #contact h2{font-size:38px;line-height:1.25;color:#FBF6EC;margin-top:18px}
+  #contact .eyebrow{color:var(--amber-lt)}
+  .steps{display:flex;flex-direction:column;gap:14px;margin-top:32px}
+  .step{display:flex;align-items:center;gap:14px}
+  .num{flex:none;width:26px;height:26px;border-radius:50%;background:rgba(245,200,119,.18);color:var(--amber-lt);font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .step span+span{font-size:18px;font-weight:600;color:#EFE4D2}
+  .form{background:var(--white);border-radius:18px;padding:40px 38px;box-shadow:0 24px 50px -20px rgba(0,0,0,.45)}
+  .who{display:flex;align-items:center;gap:14px;padding-bottom:22px;border-bottom:1px solid #EDE7DC}
+  .avatar{flex:none;width:48px;height:48px;border-radius:50%;overflow:hidden;background:#EBDFC6}
+  .avatar .ph{font-size:10px}
+  .who .nm{font-size:17px;font-weight:800}
+  .who .sub{margin-top:2px;font-size:14px;color:var(--faint)}
+  .form h3{margin:24px 0 6px;font-size:22px}
+  .form .hint{margin-bottom:24px;font-size:15px;line-height:1.6;color:var(--muted)}
+  .form label{display:block}
+  .form input,.form textarea{width:100%;font-family:inherit;font-size:15px;color:var(--ink);
+    border:1px solid var(--card-line);border-radius:10px;padding:14px 16px;background:var(--white);margin-bottom:12px}
+  .form textarea{min-height:104px;resize:vertical}
+  .form input:focus,.form textarea:focus{outline:none;border-color:var(--amber);box-shadow:0 0 0 3px rgba(235,174,74,.18)}
+  .form .btn{width:100%;border-radius:10px;padding:17px 0}
+  .fine{margin-top:16px;font-size:13px;line-height:1.5;text-align:center;color:var(--faint)}
+
+  footer{background:#3A2A18;color:#C6B69C;padding:40px 24px;text-align:center;font-size:14px}
+
+  @media (max-width:900px){
+    :root{--pad:72px}
+    h1{font-size:40px}
+    h2{font-size:32px}
+    .lead{font-size:19px}
+    #story p{font-size:18px}
+    #principles .head p{font-size:21px}
+    #contact h2{font-size:30px}
+    .grid3,.grid2,#contact .wrap{grid-template-columns:1fr;gap:24px}
+    .prod .body,.form{padding:28px 24px}
+    .btn{width:100%;text-align:center;padding:17px 24px}
+    .btn-ghost{width:auto}
+    #hero .cta-row{flex-direction:column;align-items:stretch}
+  }
+  @media (max-width:520px){
+    :root{--pad:56px}
+    h1{font-size:33px}
+    h2{font-size:27px}
+    section{padding:var(--pad) 20px}
+  }
+</style>
+</head>
+<body>
+
+<section id="hero">
+  <div class="wrap">
+    <div class="col">
+      <span class="eyebrow">Hani, Speaking</span>
+      <h1 style="margin-top:22px">Make Korean part of your <span style="color:#D9942F">everyday life</span></h1>
+      <p class="lead" style="margin-top:24px">Dive into Korean. Speak it naturally.</p>
+      <div class="cta-row">
+        <a class="btn" href="#contact">Start learning free</a>
+        <a class="btn btn-ghost" href="#method">See how it works →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="wrap">
+    <h2>Speak it naturally</h2>
+    <div class="block">
+      <div class="stanza">
+        <p>You know the words.</p>
+        <p>You know the grammar.</p>
+        <p>But when it's time to speak, Korean still doesn't come naturally.</p>
+      </div>
+      <div class="stanza">
+        <p>Because Korean is more than something you study.</p>
+        <p>It's something you experience every day.</p>
+      </div>
+    </div>
+
+    <div class="rule"></div>
+
+    <h2>Dive into Korean</h2>
+    <div class="block">
+      <div class="stanza">
+        <p>You don't have to study Korean all day.</p>
+        <p>Just start using it every day.</p>
+      </div>
+      <div class="stanza">
+        <p>Think and write in Korean.</p>
+        <p>Talk in Korean.</p>
+        <p>Make mistakes.</p>
+        <p>Try again.</p>
+      </div>
+      <p class="close">That's how Korean becomes part of you.</p>
+    </div>
+  </div>
+</section>
+
+<section id="principles">
+  <div class="wrap">
+    <div class="head">
+      <p>Don't study Korean.</p>
+      <h2>Practice it.</h2>
+    </div>
+    <div class="grid3">
+      <div class="pcard">
+        <div class="t"><span>No</span> Grammar.</div>
+        <p>Don't build sentences from rules.<br><strong>Learn the patterns.</strong></p>
+      </div>
+      <div class="pcard">
+        <div class="t"><span>No</span> Studying.</div>
+        <p>You don't have to sit at a desk<br><strong>to make progress.</strong></p>
+      </div>
+      <div class="pcard">
+        <div class="t"><span>No</span> Memorizing.</div>
+        <p>Don't memorize words in isolation.<br><strong>Learn them in context.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="method">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">The method</span>
+      <h2>How it works</h2>
+    </div>
+    <div class="grid3">
+      <div>
+        <!-- 사진 교체: <img src="images/immerse.jpg" alt="" style="height:100%;object-fit:cover"> -->
+        <div class="thumb"><div class="ph">images/immerse.jpg</div></div>
+        <h3>Immerse</h3>
+        <p>Don't wait for study time to use Korean. Bring Korean into the little moments of your day.</p>
+      </div>
+      <div>
+        <div class="thumb"><div class="ph">images/practice.jpg</div></div>
+        <h3>Practice</h3>
+        <p>Think in Korean instead of translating from your first language. Say what you're thinking, even when it's not perfect.</p>
+      </div>
+      <div>
+        <div class="thumb"><div class="ph">images/make-it-yours.jpg</div></div>
+        <h3>Make it yours</h3>
+        <p>Don't just memorize phrases and move on. Use the ones you like until they become your own.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Get started</span>
+      <h2>Choose how you want to dive in.</h2>
+    </div>
+    <div class="grid2">
+      <article class="prod">
+        <div class="shot"><div class="ph">images/challenge.jpg</div></div>
+        <div class="body">
+          <h3>Join a Challenge</h3>
+          <p class="desc">A guided Korean practice program designed to help you use Korean every day.</p>
+          <div class="feats">
+            <div class="feat"><span class="tick">✓</span> Daily Writing &amp; Speaking Practice</div>
+            <div class="feat"><span class="tick">✓</span> 1:1 Feedback</div>
+            <div class="feat"><span class="tick">✓</span> Real-Life Korean</div>
+          </div>
+          <!-- Payhip 결제 링크로 교체하세요 -->
+          <a class="btn" href="https://payhip.com/KoreanHani">Join the Challenge</a>
+        </div>
+      </article>
+      <article class="prod">
+        <div class="shot"><div class="ph">images/book.jpg</div></div>
+        <div class="body">
+          <h3>Explore the Book</h3>
+          <p class="desc">Learn practical Korean through real-life expressions and situations.</p>
+          <div class="feats">
+            <div class="feat"><span class="tick">✓</span> Pattern Check Point</div>
+            <div class="feat"><span class="tick">✓</span> Context &amp; Examples</div>
+            <div class="feat"><span class="tick">✓</span> Practice</div>
+          </div>
+          <a class="btn" href="https://payhip.com/KoreanHani">Get the Book</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Your turn</span>
+      <h2>Ready to make Korean part of your everyday life?</h2>
+      <div class="steps">
+        <div class="step"><span class="num">1</span><span>Start small.</span></div>
+        <div class="step"><span class="num">2</span><span>Practice every day.</span></div>
+        <div class="step"><span class="num">3</span><span>And make Korean yours.</span></div>
+      </div>
+    </div>
+
+    <div class="form">
+      <div class="who">
+        <div class="avatar"><div class="ph">photo</div></div>
+        <div>
+          <p class="nm">Hani ssaem</p>
+          <p class="sub">Usually replies within a day</p>
+        </div>
+      </div>
+      <h3>Ask Hani 1:1 — free</h3>
+      <p class="hint">Tell me where you're stuck and I'll suggest where to start.</p>
+      <!-- 폼 연결: Formspree 등에서 받은 주소를 action에 넣으세요 (GitHub Pages는 서버가 없어 폼 처리 서비스가 필요합니다) -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label><input type="email" name="email" placeholder="Your email" required></label>
+        <label><textarea name="message" placeholder="What would you like to ask?" required></textarea></label>
+        <button class="btn" type="submit">Send my question</button>
+      </form>
+      <p class="fine">Free · No obligation to buy</p>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Hani, Speaking · <a href="https://payhip.com/KoreanHani" style="color:#F5C877">Store</a></footer>
+
+</body>
+</html>

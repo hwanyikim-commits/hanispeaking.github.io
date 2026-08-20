@@ -242,11 +242,7 @@
   .signup-form input[type=email]:focus{ outline:2px solid var(--green); outline-offset:1px; }
   .signup-form .btn{ width:100%; }
   .microcopy{ margin-top:16px; font-size:14px; color:var(--ink-soft); }
-  .success-msg{
-    display:none; margin-top:22px; padding:18px 20px;
-    background:var(--green-soft); border-radius:12px; font-size:17px;
-  }
-  .success-msg.show{ display:block; }
+ 
 
   footer{ text-align:center; padding:34px 0 60px; font-size:14px; color:var(--ink-soft); }
 
@@ -427,11 +423,7 @@
     <span class="eyebrow">Start today</span>
     <h2>Ready to start speaking? 🇰🇷</h2>
     <p class="sub">Enter your email and we'll send the free 30-day guide to your inbox.</p>
-    <form class="signup-form" id="challengeForm">
-      <label for="email" style="position:absolute;left:-9999px;">Email address</label>
-      <input type="email" id="email" name="email" placeholder="you@email.com" required>
-      <button type="submit" class="btn btn-primary">Join the Challenge</button>
-    </form>
+    <script async src="https://eomail5.com/form/394e811c-9ca5-11f1-8f5a-23a85795abfa.js" data-form="394e811c-9ca5-11f1-8f5a-23a85795abfa"></script>
     <p class="microcopy">No spam. Unsubscribe anytime.</p>
     <div class="success-msg" id="successMsg">Thanks — check your inbox. Your free 30-day guide is on its way. 🎉</div>
   </div>
@@ -461,14 +453,7 @@
   io2.observe(hero);
   io2.observe(signup);
 
-  // NOTE: replace with your real form endpoint (Google Form / ConvertKit / Mailchimp) for live delivery.
-  const form = document.getElementById('challengeForm');
-  const successMsg = document.getElementById('successMsg');
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    form.style.display = 'none';
-    successMsg.classList.add('show');
-  });
+  
 </script>
 
 </body>

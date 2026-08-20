@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0">
+<title>30 Day Korean Speaking Challenge — Hani, Speaking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1f2328;
+    --ink-soft:#5b6169;
+    --paper:#faf7f1;
+    --paper-2:#f2ede3;
+    --card:#ffffff;
+    --green:#3f6b5f;
+    --green-soft:#e6efeb;
+    --accent:#c1502e;
+    --accent-soft:#f6e4dc;
+    --line:rgba(31,35,40,0.12);
+    --max:720px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Inter","Pretendard Variable","Pretendard",-apple-system,BlinkMacSystemFont,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.6;
+    font-size:18px;
+  }
+
+  h1,h2,h3{
+    font-weight:700;
+    letter-spacing:-0.02em;
+    color:var(--ink);
+    margin:0;
+    line-height:1.2;
+  }
+
+  .wrap{ max-width:var(--max); margin:0 auto; padding:0 24px; }
+
+  .eyebrow{
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--green);
+  }
+
+  section{ padding:72px 0; }
+  section + section{ border-top:1px solid var(--line); }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    font-family:inherit;
+    font-weight:600;
+    font-size:18px;
+    padding:17px 34px;
+    border-radius:999px;
+    text-decoration:none;
+    cursor:pointer;
+    border:1px solid transparent;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn-primary{
+    background:var(--accent);
+    color:#fff;
+    box-shadow:0 2px 8px rgba(193,80,46,0.25);
+  }
+  .btn-primary:hover{ box-shadow:0 8px 20px rgba(193,80,46,0.32); }
+
+  /* ---------- brand bar ---------- */
+  .topbar{
+    display:flex; align-items:center; gap:10px;
+    max-width:var(--max); margin:0 auto; padding:26px 24px 0;
+  }
+  .topbar svg{ width:30px; height:30px; }
+  .topbar span{ font-size:16px; font-weight:600; letter-spacing:-0.01em; }
+
+  /* ---------- hero ---------- */
+  .hero{ text-align:center; padding:64px 0 68px; }
+  .hero .eyebrow{ display:block; margin-bottom:20px; }
+  .hero h1{
+    font-size:clamp(34px, 6.4vw, 52px);
+    max-width:600px;
+    margin:0 auto;
+  }
+  .hero .sub{
+    margin:22px auto 0;
+    max-width:480px;
+    font-size:20px;
+    color:var(--ink-soft);
+  }
+  .hero .cta-row{ margin-top:36px; }
+
+  /* ---------- self diagnosis ---------- */
+  .diagnose h2{ font-size:30px; text-align:center; margin-bottom:10px; }
+  .diagnose .sub{ text-align:center; color:var(--ink-soft); font-size:18px; margin-bottom:36px; }
+  .diag-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:16px; }
+  .diag-list li{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:22px 24px;
+    font-size:18px;
+    font-weight:500;
+    display:flex; gap:16px; align-items:flex-start;
+  }
+  .diag-list li .q{
+    flex:none;
+    font-size:34px; line-height:0.7;
+    color:var(--green);
+    font-weight:700;
+  }
+
+  /* ---------- intro ---------- */
+  .intro{ text-align:center; }
+  .intro h2{ font-size:34px; margin-bottom:18px; }
+  .intro p{ margin:0 auto; max-width:560px; font-size:19px; }
+  .intro p + p{ margin-top:16px; }
+  .intro strong{ color:var(--ink); }
+
+  /* ---------- what's inside ---------- */
+  .inside .eyebrow{ display:block; text-align:center; margin-bottom:36px; }
+  .inside-list{
+    list-style:none; margin:0; padding:0;
+    display:grid; grid-template-columns:1fr 1fr; gap:18px;
+  }
+  .inside-list li{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:26px 24px;
+  }
+  .inside-list li .emoji{
+    font-size:30px; line-height:1;
+    display:block; margin-bottom:16px;
+  }
+  .inside-list li .h{
+    font-size:19px; font-weight:700;
+    margin-bottom:6px;
+  }
+  .inside-list li p{ margin:0; font-size:16px; color:var(--ink-soft); line-height:1.5; }
+
+  /* ---------- how it works ---------- */
+  .how .eyebrow{ display:block; text-align:center; margin-bottom:12px; }
+  .how h2{ font-size:32px; text-align:center; margin-bottom:40px; }
+  .steps{ display:flex; flex-direction:column; gap:20px; }
+  .step{
+    display:flex; gap:20px; align-items:flex-start;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:24px 26px;
+  }
+  .step .badge{
+    flex:none;
+    width:52px; height:52px;
+    border-radius:14px;
+    background:var(--green-soft);
+    display:flex; align-items:center; justify-content:center;
+    font-size:26px;
+  }
+  .step .body h3{ font-size:20px; margin-bottom:6px; }
+  .step .body p{ margin:0; font-size:17px; color:var(--ink-soft); }
+
+  .tracker-note{
+    margin-top:24px;
+    text-align:center;
+    font-size:17px;
+    color:var(--ink-soft);
+  }
+  .tracker-note b{ color:var(--green); }
+
+  /* ---------- filter ---------- */
+  .filter-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  .filter-col{ border-radius:16px; padding:26px 26px 28px; }
+  .filter-col.no{ background:var(--card); border:1px solid var(--line); }
+  .filter-col.yes{ background:var(--green-soft); }
+  .filter-col h4{ font-size:16px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; margin:0 0 18px; }
+  .filter-col.no h4{ color:var(--accent); }
+  .filter-col.yes h4{ color:var(--green); }
+  .filter-col ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px; }
+  .filter-col li{ font-size:16.5px; display:flex; gap:10px; line-height:1.45; }
+  .filter-col li .mark{ flex:none; font-weight:700; font-size:17px; }
+  .filter-col.no .mark{ color:var(--accent); }
+  .filter-col.yes .mark{ color:var(--green); }
+
+  /* ---------- next step ---------- */
+  .next h2{ font-size:32px; margin-bottom:18px; }
+  .next p{ font-size:19px; margin:0 0 16px; }
+  .next em{ font-style:italic; }
+  .book-card{
+    margin-top:26px;
+    display:flex; gap:22px; align-items:center;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:24px 26px;
+  }
+  .book-cover{
+    flex:none;
+    width:72px; height:98px;
+    border-radius:4px;
+    background:linear-gradient(155deg,#1f2328 0%,#363d47 100%);
+    color:var(--paper);
+    display:flex; align-items:center; justify-content:center;
+    text-align:center; padding:10px;
+    font-size:11px; font-weight:600; letter-spacing:0.05em; line-height:1.5;
+  }
+  .book-info .series{ font-size:13px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent); }
+  .book-info h4{ font-size:20px; font-weight:700; margin:6px 0 0; }
+
+  /* ---------- signup ---------- */
+  .signup{ text-align:center; padding-bottom:110px; }
+  .signup .eyebrow{ display:block; margin-bottom:14px; }
+  .signup h2{ font-size:clamp(30px,5vw,40px); max-width:500px; margin:0 auto 14px; }
+  .signup .sub{ color:var(--ink-soft); font-size:19px; margin-bottom:34px; }
+  form.signup-form{ display:flex; flex-direction:column; gap:14px; max-width:420px; margin:0 auto; }
+  .signup-form input[type=email]{
+    font-family:inherit; font-size:18px;
+    padding:17px 20px;
+    border:1px solid var(--line);
+    border-radius:12px;
+    background:#fff; color:var(--ink);
+  }
+  .signup-form input[type=email]:focus{ outline:2px solid var(--green); outline-offset:1px; }
+  .signup-form .btn{ width:100%; }
+  .microcopy{ margin-top:16px; font-size:14px; color:var(--ink-soft); }
+  .success-msg{
+    display:none; margin-top:22px; padding:18px 20px;
+    background:var(--green-soft); border-radius:12px; font-size:17px;
+  }
+  .success-msg.show{ display:block; }
+
+  footer{ text-align:center; padding:34px 0 60px; font-size:14px; color:var(--ink-soft); }
+
+  /* ---------- sticky cta ---------- */
+  .sticky-cta{
+    position:fixed; left:0; right:0; bottom:0;
+    background:var(--paper);
+    border-top:1px solid var(--line);
+    padding:14px 16px calc(14px + env(safe-area-inset-bottom));
+    transform:translateY(120%);
+    transition:transform .25s ease;
+    z-index:40;
+  }
+  .sticky-cta.show{ transform:translateY(0); }
+  .sticky-cta .btn{ width:100%; max-width:var(--max); margin:0 auto; display:flex; }
+
+  /* ---------- reveal ---------- */
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .5s ease, transform .5s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+
+  @media (max-width:600px){
+    section{ padding:56px 0; }
+    .inside-list{ grid-template-columns:1fr; }
+    .filter-grid{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="20" cy="20" r="18.5" stroke="#1f2328" stroke-width="1.4"/>
+    <text x="20" y="26" text-anchor="middle" font-family="Pretendard Variable, sans-serif" font-size="17" font-weight="600" fill="#1f2328">ㅎ</text>
+  </svg>
+  <span>Hani, Speaking</span>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Free 30-Day Challenge</span>
+    <h1>Speak Korean every day for 30 days.</h1>
+    <p class="sub">You know the words. Now start using them — one small prompt a day.</p>
+    <div class="cta-row">
+      <a href="#signup" class="btn btn-primary">Join the Challenge</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SELF DIAGNOSIS ============ -->
+<section class="diagnose">
+  <div class="wrap reveal">
+    <h2>Which one sounds like you?</h2>
+    <p class="sub">If any of these feel familiar, this challenge was built for you.</p>
+    <ul class="diag-list">
+      <li><span class="q">&ldquo;</span> I know grammar and vocabulary, but when I open my mouth, nothing comes out.</li>
+      <li><span class="q">&ldquo;</span> I can write a sentence, but saying it out loud feels completely different.</li>
+      <li><span class="q">&ldquo;</span> I understand what I hear, but I can't produce it myself.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ INTRO ============ -->
+<section class="intro">
+  <div class="wrap reveal">
+    <h2>30 Day Korean Speaking Challenge</h2>
+    <p>A free guide with 30 days of simple speaking prompts, delivered as one PDF you can download and start today.</p>
+    <p><strong>No long study sessions. No new grammar to memorize.</strong> Just pick the day's topic and start speaking.</p>
+  </div>
+</section>
+
+<!-- ============ WHAT'S INSIDE ============ -->
+<section class="inside">
+  <div class="wrap reveal">
+    <span class="eyebrow">What's inside</span>
+    <ul class="inside-list">
+      <li>
+        <span class="emoji">🗓️</span>
+        <div class="h">30 daily topics</div>
+        <p>Starting simple and getting deeper over time.</p>
+      </li>
+      <li>
+        <span class="emoji">💬</span>
+        <div class="h">Guiding questions</div>
+        <p>So you're never staring at a blank page.</p>
+      </li>
+      <li>
+        <span class="emoji">✨</span>
+        <div class="h">A daily speaking tip</div>
+        <p>Small ways to sound more natural, every day.</p>
+      </li>
+      <li>
+        <span class="emoji">✅</span>
+        <div class="h">A simple tracker</div>
+        <p>Check off each day to keep the streak going.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="how">
+  <div class="wrap reveal">
+    <span class="eyebrow">How it works</span>
+    <h2>Three steps. Every day.</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="badge">📖</div>
+        <div class="body">
+          <h3>Pick the day's topic</h3>
+          <p>One prompt a day, with guiding questions ready when your mind goes blank.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="badge">🗣️</div>
+        <div class="body">
+          <h3>Speak out loud for 5–10 minutes</h3>
+          <p>At your desk, in the shower, or while walking. Mistakes are fine — just keep talking.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="badge">✅</div>
+        <div class="body">
+          <h3>Check off your day</h3>
+          <p>Mark today done and watch your streak grow, one day at a time.</p>
+        </div>
+      </div>
+    </div>
+    <p class="tracker-note">Some days will feel hard. <b>Don't stop when you make mistakes</b> — just extend your thoughts a little more each time.</p>
+  </div>
+</section>
+
+<!-- ============ FILTER ============ -->
+<section class="filter">
+  <div class="wrap reveal">
+    <div class="filter-grid">
+      <div class="filter-col no">
+        <h4>Not for you if</h4>
+        <ul>
+          <li><span class="mark">✕</span> You're a complete beginner who hasn't learned basic grammar yet.</li>
+          <li><span class="mark">✕</span> You already speak Korean comfortably in daily conversation.</li>
+          <li><span class="mark">✕</span> You want detailed grammar feedback on every sentence.</li>
+        </ul>
+      </div>
+      <div class="filter-col yes">
+        <h4>For you if</h4>
+        <ul>
+          <li><span class="mark">✓</span> You understand Korean, but speaking still feels difficult.</li>
+          <li><span class="mark">✓</span> You know a lot of words, but they don't come out when you need them.</li>
+          <li><span class="mark">✓</span> You spend more time studying Korean than actually using it.</li>
+          <li><span class="mark">✓</span> You want to make Korean part of your everyday life.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEXT STEP ============ -->
+<section class="next">
+  <div class="wrap reveal">
+    <h2>Your next step</h2>
+    <p>By Day 30, you'll have 30 days of real practice behind you — and a clear sense of where your Korean still needs work.</p>
+    <p>That's usually the same gap: you know the grammar, but not how Koreans actually use it in real conversation.</p>
+    <p><em>Real Korean Patterns</em> covers 30 expressions Koreans use every day — the ones your textbook explained as a rule, but never showed you how they really feel in conversation.</p>
+    <div class="book-card">
+      <div class="book-cover">REAL<br>KOREAN<br>PATTERNS</div>
+      <div class="book-info">
+        <div class="series">Real Korean Patterns · Book 1</div>
+        <h4>30 patterns. 7 parts. Real conversation.</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SIGNUP ============ -->
+<section class="signup" id="signup">
+  <div class="wrap reveal">
+    <span class="eyebrow">Start today</span>
+    <h2>Ready to start speaking? 🇰🇷</h2>
+    <p class="sub">Enter your email and we'll send the free 30-day guide to your inbox.</p>
+    <form class="signup-form" id="challengeForm">
+      <label for="email" style="position:absolute;left:-9999px;">Email address</label>
+      <input type="email" id="email" name="email" placeholder="you@email.com" required>
+      <button type="submit" class="btn btn-primary">Join the Challenge</button>
+    </form>
+    <p class="microcopy">No spam. Unsubscribe anytime.</p>
+    <div class="success-msg" id="successMsg">Thanks — check your inbox. Your free 30-day guide is on its way. 🎉</div>
+  </div>
+</section>
+
+<footer>© 2026 Hani, Speaking · Real Korean Patterns</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <a href="#signup" class="btn btn-primary">Join the Challenge</a>
+</div>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  const hero = document.querySelector('.hero');
+  const stickyCta = document.getElementById('stickyCta');
+  const signup = document.getElementById('signup');
+  const io2 = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.target === hero){ stickyCta.classList.toggle('show', !e.isIntersecting); }
+      if(e.target === signup && e.isIntersecting){ stickyCta.classList.remove('show'); }
+    });
+  }, {threshold:0});
+  io2.observe(hero);
+  io2.observe(signup);
+
+  // NOTE: replace with your real form endpoint (Google Form / ConvertKit / Mailchimp) for live delivery.
+  const form = document.getElementById('challengeForm');
+  const successMsg = document.getElementById('successMsg');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    form.style.display = 'none';
+    successMsg.classList.add('show');
+  });
+</script>
+
+</body>
+</html>

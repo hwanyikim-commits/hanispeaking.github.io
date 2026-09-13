@@ -48,12 +48,14 @@
 }
 
 #hero .col{
-  max-width:640px;
+  max-width:900px;
   margin:0 auto;
   display:flex;
   flex-direction:column;
   align-items:center;
 }
+
+#hero h1 .hero-line{display:block;white-space:nowrap}
 
 #hero .cta-row{
   display:flex;
@@ -143,7 +145,7 @@
   }
   @media (max-width:520px){
     :root{--pad:56px}
-    h1{font-size:33px}
+    h1{font-size:27px}
     h2{font-size:27px}
     section{padding:var(--pad) 20px}
   }
@@ -222,8 +224,8 @@
 
     <div style="display:flex; gap:28px; align-items:center; flex-wrap:wrap;">
       <a href="index.html" style="color:#4F4740;">Home</a>
-      <a href="30-day-challenge-landing.html" style="color:#4F4740;">Challenge</a>
-      <a href="#" style="color:#4F4740;">Free Guide</a>
+      <a href="free-resources.html" style="color:#4F4740;">Free Resources</a>
+      <a href="30-day-challenge-landing.html" style="color:#4F4740;">Free Guide</a>
       <a href="blog/" style="color:#4F4740;">Blog</a>
       <a href="book.html" style="color:#4F4740;">Book</a>
     </div>
@@ -234,7 +236,7 @@
     <div class="wrap">
     <div class="col">
       <span class="eyebrow">Hani, Speaking</span>
-      <h1 style="margin-top:22px">Speak Korean<br>the way Koreans <span style="color:#D9942F">actually do.</span></h1>
+      <h1 style="margin-top:22px"><span class="hero-line">Speak Korean</span><span class="hero-line">the way Koreans <span style="color:#D9942F">actually do.</span></span></h1>
       <p class="lead" style="margin-top:24px">Learn real Korean patterns, practice speaking and writing,<br>and make Korean part of your everyday life.</p>
       <div class="cta-row">
         <a class="btn" href="30-day-challenge-landing.html">Get the Free Guide ↗</a>

@@ -1,11 +1,11 @@
 ---
-title: "How to Say “I’m Thinking of…” Naturally in Korean: -(으)ㄹ 생각이에요"
-subtitle: "Learn when Koreans use -(으)ㄹ 생각이에요, how it differs from 생각하고 있어요 and -(으)려고요, and how to use it naturally in real conversations."
+title: "“I’m Thinking of…” in Korean: -(으)ㄹ 생각이에요"
+subtitle: "A natural way to talk about plans and intentions."
 category: "Patterns"
 description: "Learn the natural Korean pattern -(으)ㄹ 생각이에요 for plans and intentions, plus the difference between 생각하고 있어요 and -(으)려고요."
 date: "2026-09-14"
 image: "../images/korean-patterns-thinking-of.svg"
-read_time: "8"
+read_time: "6"
 ---
 
 You want to say:
@@ -255,54 +255,7 @@ I’m planning to get my driver’s license this year.
 **이번에는 직접 만들어 볼 생각이에요.**  
 I’m thinking of trying to make it myself this time.
 
-## 8. You can also ask about someone’s plan
-
-You can use this pattern in questions too.
-
-**이번 주말에 뭐 할 생각이에요?**  
-What are you thinking of doing this weekend?
-
-**한국에는 얼마나 있을 생각이에요?**  
-How long are you planning to stay in Korea?
-
-**언제 시작할 생각이에요?**  
-When are you planning to start?
-
-These questions can sound a little more focused on someone’s intentions or plans than a simple **뭐 할 거예요?**
-
-## 9. A common translation mistake
-
-A common mistake is translating every English sentence containing **think** with **생각하다**.
-
-For example:
-
-“I’m thinking of traveling next month.”
-
-A learner might create:
-
-**다음 달에 여행하는 것을 생각하고 있어요.**
-
-This sounds unnecessarily literal in everyday conversation.
-
-If you are simply talking about your current plan, this is much more natural:
-
-**다음 달에 여행할 생각이에요.**
-
-Instead of translating the English word first, ask yourself what you actually mean.
-
-Are you considering or thinking about an idea?
-
-→ **생각하고 있어요**
-
-Are you sharing a plan you currently have?
-
-→ **-(으)ㄹ 생각이에요**
-
-Are you emphasizing what you intend to do?
-
-→ **-(으)려고요**
-
-## 10. Quick recap
+## 8. Quick recap
 
 **-(으)ㄹ 생각이에요**  
 → a plan or intention you currently have in mind
@@ -316,20 +269,5 @@ Are you emphasizing what you intend to do?
 So the next time you want to say **“I’m thinking of…”**, don’t automatically translate **think** as **생각하다**.
 
 Sometimes the Korean expression you really need is **-(으)ㄹ 생각이에요**.
-
-## Your turn
-
-What are you thinking of doing this weekend?
-
-**이번 주말에 뭐 할 생각이에요?**
-
-Try answering in Korean:
-
-- **오늘은 집에서 쉴 생각이에요.**
-- **친구를 만날 생각이에요.**
-- **한국어 공부할 생각이에요.**
-- **여행 갈 생각이에요.**
-
-Write your own sentence using **-(으)ㄹ 생각이에요**.
 
 @amazing_korean_speaking

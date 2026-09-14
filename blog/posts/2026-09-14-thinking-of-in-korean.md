@@ -12,15 +12,11 @@ You want to say:
 
 “I’m thinking of meeting a friend this weekend.”
 
-A word-for-word translation might sound like this:
+[literal] **주말에 친구를 만나는 것을 생각하고 있어요.** || I’m thinking about meeting a friend this weekend.
 
-[example] **주말에 친구를 만나는 것을 생각하고 있어요.** || I’m thinking about meeting a friend this weekend.
+[key] **주말에 친구를 만날 생각이에요.** || I’m thinking of meeting a friend this weekend.
 
-It is understandable, but if you are simply sharing your current plan, Korean usually sounds more natural like this:
-
-[example] **주말에 친구를 만날 생각이에요.** || I’m thinking of meeting a friend this weekend.
-
-So what does **-(으)ㄹ 생각이에요** really mean?
+The first sentence is understandable, but the second is more natural when you are simply sharing a plan you have in mind.
 
 ## 1. What it means
 
@@ -36,39 +32,27 @@ The key feeling is:
 
 > “This is the plan I currently have in mind.”
 
-Depending on the situation, it can be translated as **I’m thinking of…**, **I’m planning to…**, or **I intend to…**.
+Depending on the situation, it can mean **I’m thinking of…**, **I’m planning to…**, or **I intend to…**.
 
 ## 2. 생각하고 있어요 vs. -(으)ㄹ 생각이에요
 
-These can look similar, but the focus is different.
+The difference is mainly in what you are focusing on.
 
-### 생각하고 있어요
+[compare] 생각하고 있어요 || **요즘 이직을 생각하고 있어요.** || I’m considering changing jobs. || Focus: the thinking or consideration itself.
 
-This focuses on the thinking or consideration itself.
+[compare] -(으)ㄹ 생각이에요 || **요즘 이직할 생각이에요.** || I’m thinking of changing jobs. || Focus: a plan or intention already in your mind.
 
-[example] **요즘 이직을 생각하고 있어요.** || I’m considering changing jobs.
-
-You may still be weighing your options.
-
-### -(으)ㄹ 생각이에요
-
-This presents the action as a plan or intention already in your mind.
-
-[example] **요즘 이직할 생각이에요.** || I’m thinking of changing jobs. / I’m planning to change jobs.
-
-The plan does not have to be 100% confirmed, but it is more than simply thinking about the idea.
+The plan does not have to be 100% confirmed, but **-(으)ㄹ 생각이에요** presents it more as your current plan than simply an idea you are considering.
 
 ## 3. In conversation
 
-If a friend asks what you are doing this weekend, you can naturally answer with this pattern.
+The same pattern works in both polite and casual speech.
 
-[polite] **A: 이번 주말에 뭐 해요?** / **B: 친구를 만날 생각이에요.** || A: What are you doing this weekend? / B: I’m thinking of meeting a friend.
+[dialogue] POLITE || **A: 이번 주말에 뭐 해요?** / **B: 친구를 만날 생각이에요.** || A: What are you doing this weekend? / B: I’m thinking of meeting a friend.
 
-With a close friend, the same pattern becomes **-(으)ㄹ 생각이야**.
+[dialogue] CASUAL || **A: 주말에 뭐 할 거야?** / **B: 친구 만날 생각이야.** || A: What are you doing this weekend? / B: I’m thinking of meeting a friend.
 
-[casual] **A: 주말에 뭐 할 거야?** / **B: 친구 만날 생각이야.** || A: What are you doing this weekend? / B: I’m thinking of meeting a friend.
-
-The meaning stays the same, but the speech level changes.
+With close friends, **-(으)ㄹ 생각이에요** becomes **-(으)ㄹ 생각이야**.
 
 ## 4. How to form it
 
@@ -76,53 +60,25 @@ The basic pattern is:
 
 > Verb + **-(으)ㄹ 생각이에요**
 
-### Vowel → -ㄹ 생각이에요
+[rule] Vowel → -ㄹ 생각이에요 || 가다 → 갈 생각이에요 / 공부하다 → 공부할 생각이에요 / 쉬다 → 쉴 생각이에요
 
-가다 → 갈 생각이에요  
-공부하다 → 공부할 생각이에요  
-쉬다 → 쉴 생각이에요
+[rule] Final consonant → -을 생각이에요 || 먹다 → 먹을 생각이에요 / 찾다 → 찾을 생각이에요 / 읽다 → 읽을 생각이에요
 
-[example] **오늘은 집에서 쉴 생각이에요.** || I’m thinking of resting at home today.
-
-### Final consonant → -을 생각이에요
-
-먹다 → 먹을 생각이에요  
-찾다 → 찾을 생각이에요  
-읽다 → 읽을 생각이에요
-
-[example] **이번 주말에 이 책을 읽을 생각이에요.** || I’m thinking of reading this book this weekend.
-
-### ㄹ final consonant → 생각이에요
+[rule] ㄹ final consonant → 생각이에요 || 만들다 → 만들 생각이에요 / 살다 → 살 생각이에요
 
 When the verb stem already ends in **ㄹ**, you do not add another ㄹ.
 
-만들다 → 만들 생각이에요  
-살다 → 살 생각이에요
-
-[casual] **이번에는 내가 직접 만들 생각이야.** || I’m thinking of making it myself this time.
+[key] **이번에는 내가 직접 만들 생각이야.** || I’m thinking of making it myself this time.
 
 ## 5. -(으)ㄹ 생각이에요 vs. -(으)려고요
 
 Both expressions can describe a future action, but the nuance is slightly different.
 
-### -(으)려고요
+[compare] -(으)려고요 || **주말에 친구 만나려고요.** || I’m going to meet a friend this weekend. || More action-oriented: what I intend to do.
 
-This feels more action-oriented and focuses on what you intend to do.
+[compare] -(으)ㄹ 생각이에요 || **주말에 친구 만날 생각이에요.** || I’m thinking of meeting a friend this weekend. || More plan-focused: what I currently have in mind.
 
-[example] **주말에 친구 만나려고요.** || I’m going to meet a friend this weekend.
-
-### -(으)ㄹ 생각이에요
-
-This focuses more on the plan you currently have in mind.
-
-[example] **주말에 친구 만날 생각이에요.** || I’m thinking of meeting a friend this weekend.
-
-A simple way to remember it:
-
-**-(으)려고요** → What do I intend to do?  
-**-(으)ㄹ 생각이에요** → What plan do I have in mind?
-
-In many everyday situations, both can be natural.
+In many everyday situations, both expressions are natural.
 
 ## 6. Is the plan uncertain?
 
@@ -132,11 +88,9 @@ Not necessarily.
 
 [example] **졸업 후에는 한국에서 일할 생각이에요.** || I’m planning to work in Korea after graduation.
 
-If you want to make the uncertainty clear, add context.
-
 [example] **아직 확실하지 않지만 한국에 갈 생각이에요.** || I’m not sure yet, but I’m thinking of going to Korea.
 
-The uncertainty comes from **아직 확실하지 않지만**, not from **-(으)ㄹ 생각이에요** itself.
+The uncertainty in the second sentence comes from **아직 확실하지 않지만**, not from **-(으)ㄹ 생각이에요** itself.
 
 ## 7. More examples
 

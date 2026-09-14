@@ -4,7 +4,7 @@ subtitle: "A natural way to talk about plans and intentions."
 category: "Patterns"
 description: "Learn the natural Korean pattern -(으)ㄹ 생각이에요 for plans and intentions, plus the difference between 생각하고 있어요 and -(으)려고요."
 date: "2026-09-14"
-image: "../images/korean-patterns-thinking-of.svg"
+image: "../images/korean-patterns-thinking-of.webp"
 read_time: "6"
 ---
 

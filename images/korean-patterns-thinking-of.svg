@@ -1,12 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="676" viewBox="0 0 1200 676" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
 <title id="title">Korean Patterns -ㄹ 생각이야 / 생각이에요</title>
-<desc id="desc">Minimal cream and purple Korean learning thumbnail</desc>
-<rect width="1200" height="676" rx="30" fill="#FFFCF7"/>
-<rect x="1" y="1" width="1198" height="674" rx="29" fill="none" stroke="#F0E8DE" stroke-width="2"/>
-<g fill="#47218E" text-anchor="middle" font-family="Pretendard, Arial, Helvetica, sans-serif" font-weight="800" letter-spacing="-5">
-<text x="600" y="248" font-size="126">Korean</text>
-<text x="600" y="382" font-size="126">Patterns</text>
+<desc id="desc">Cream and purple Korean learning cover image</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#FFFDF9"/>
+    <stop offset="1" stop-color="#FFF8EF"/>
+  </linearGradient>
+  <linearGradient id="purple" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#2E126E"/>
+    <stop offset="0.55" stop-color="#432090"/>
+    <stop offset="1" stop-color="#4B219D"/>
+  </linearGradient>
+  <linearGradient id="pill" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#E8DAF9"/>
+    <stop offset="1" stop-color="#E4D1F7"/>
+  </linearGradient>
+  <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+    <feDropShadow dx="0" dy="3" stdDeviation="8" flood-color="#C9B9A5" flood-opacity="0.18"/>
+  </filter>
+</defs>
+<rect x="7" y="7" width="1186" height="666" rx="34" fill="url(#bg)" stroke="#F0E8DD" stroke-width="2" filter="url(#softShadow)"/>
+<g fill="url(#purple)" text-anchor="middle" font-family="Arial Black, Pretendard, Arial, Helvetica, sans-serif" font-weight="900" letter-spacing="-7">
+  <text x="600" y="285" font-size="144">Korean</text>
+  <text x="600" y="408" font-size="144">Patterns</text>
 </g>
-<rect x="250" y="435" width="700" height="92" rx="46" fill="#E9DAFA"/>
-<text x="600" y="496" fill="#47218E" text-anchor="middle" font-family="Pretendard, Arial, Helvetica, sans-serif" font-size="46" font-weight="700" letter-spacing="-1.2">-ㄹ 생각이야 / 생각이에요</text>
+<rect x="270" y="442" width="660" height="88" rx="44" fill="url(#pill)"/>
+<text x="600" y="499" fill="#47218E" text-anchor="middle" font-family="Pretendard, Arial, Helvetica, sans-serif" font-size="39" font-weight="800" letter-spacing="-1.2">-ㄹ 생각이야 / 생각이에요</text>
 </svg>

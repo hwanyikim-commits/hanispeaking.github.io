@@ -37,42 +37,18 @@
   .btn-ghost:hover{transform:none;box-shadow:none;color:var(--ink)}
   .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
   .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
-
-  /* .ph = 사진 자리표시. README의 안내대로 img 태그로 교체하세요. */
   .ph{width:100%;height:100%;background:#EFE4CE;border-radius:inherit;display:flex;align-items:center;
     justify-content:center;font-size:13px;color:#A89577;text-align:center;padding:12px}
-
-  #hero{
-  background:var(--cream);
-  text-align:center;
-}
-
-#hero .col{
-  max-width:900px;
-  margin:0 auto;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-
-#hero h1 .hero-line{display:block;white-space:nowrap}
-
-#hero .cta-row{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:18px;
-  margin-top:40px;
-  flex-wrap:wrap;
-}
-
+  #hero{background:var(--cream);text-align:center}
+  #hero .col{max-width:900px;margin:0 auto;display:flex;flex-direction:column;align-items:center}
+  #hero h1 .hero-line{display:block;white-space:nowrap}
+  #hero .cta-row{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:40px;flex-wrap:wrap}
   #story{background:var(--white);text-align:center}
   #story .block{max-width:620px;margin:36px auto 0;display:flex;flex-direction:column;gap:26px}
   #story .stanza{display:flex;flex-direction:column;gap:8px}
   #story p{font-size:20px;line-height:1.6;color:var(--body)}
   #story .close{font-weight:700;color:var(--ink)}
   .rule{width:56px;height:2px;background:var(--line);margin:64px auto}
-
   #principles{background:var(--gray)}
   #principles .head{text-align:center;margin-bottom:60px}
   #principles .head p{font-size:26px;line-height:1.35;font-weight:500;color:var(--muted)}
@@ -82,14 +58,12 @@
   .pcard .t span{color:var(--terra)}
   .pcard p{font-size:17px;line-height:1.6;color:var(--muted)}
   .pcard strong{color:var(--ink);font-weight:700}
-
   #method{background:var(--white)}
   #method .head{text-align:center;margin-bottom:56px}
   #method .head h2{margin-top:16px}
   #method .thumb{height:180px;border-radius:14px;overflow:hidden;background:#F1E7D2}
   #method h3{margin:22px 0 10px}
   #method p{font-size:16px;line-height:1.6;color:var(--muted)}
-
   #products{background:var(--cream)}
   #products .head{text-align:center;margin-bottom:56px}
   #products .head h2{margin-top:16px}
@@ -103,7 +77,6 @@
   .feat{display:flex;align-items:center;gap:12px;font-size:16px}
   .tick{flex:none;width:22px;height:22px;border-radius:50%;background:var(--amber);color:#3A2C10;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center}
   .prod .btn{margin-top:26px;text-align:center;align-self:center}
-
   #contact{background:var(--brown);padding:96px 24px}
   #contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
   #contact h2{font-size:38px;line-height:1.25;color:#FBF6EC;margin-top:18px}
@@ -121,15 +94,12 @@
   .form h3{margin:24px 0 6px;font-size:22px}
   .form .hint{margin-bottom:24px;font-size:15px;line-height:1.6;color:var(--muted)}
   .form label{display:block}
-  .form input,.form textarea{width:100%;font-family:inherit;font-size:15px;color:var(--ink);
-    border:1px solid var(--card-line);border-radius:10px;padding:14px 16px;background:var(--white);margin-bottom:12px}
+  .form input,.form textarea{width:100%;font-family:inherit;font-size:15px;color:var(--ink);border:1px solid var(--card-line);border-radius:10px;padding:14px 16px;background:var(--white);margin-bottom:12px}
   .form textarea{min-height:104px;resize:vertical}
   .form input:focus,.form textarea:focus{outline:none;border-color:var(--amber);box-shadow:0 0 0 3px rgba(235,174,74,.18)}
   .form .btn{width:100%;border-radius:10px;padding:17px 0}
   .fine{margin-top:16px;font-size:13px;line-height:1.5;text-align:center;color:var(--faint)}
-
   footer{background:#3A2A18;color:#C6B69C;padding:40px 24px;text-align:center;font-size:14px}
-
   @media (max-width:900px){
     :root{--pad:72px}
     h1{font-size:40px}
@@ -150,277 +120,50 @@
     h2{font-size:27px}
     section{padding:var(--pad) 20px}
   }
-  .hani-story {
-  background: #fff;
-  padding: 110px 24px;
-  text-align: center;
-}
-
-.story-wrap {
-  max-width: 820px;
-  margin: 0 auto;
-}
-
-.story-eyebrow {
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  color: #C0512F;
-  margin: 0 0 20px;
-}
-
-.hani-story h2 {
-  font-size: 44px;
-  line-height: 1.2;
-  margin: 0 0 55px;
-}
-
-.story-content {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.story-content p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #6B6151;
-  margin: 0 0 30px;
-}
-
-.story-content strong {
-  color: #2B2622;
-  font-weight: 800;
-}
-
-.story-ending {
-  margin-top: 45px !important;
-  padding-top: 32px;
-  border-top: 1px solid #E7D8BE;
-}
-
-@media (max-width: 700px) {
-  .hani-story {
-    padding: 75px 22px;
-  }
-
-  .hani-story h2 {
-    font-size: 34px;
-    margin-bottom: 40px;
-  }
-
-  .story-content p {
-    font-size: 17px;
-  }
-}
+  .hani-story{background:#fff;padding:110px 24px;text-align:center}
+  .story-wrap{max-width:820px;margin:0 auto}
+  .story-eyebrow{font-size:14px;font-weight:800;letter-spacing:3px;color:#C0512F;margin:0 0 20px}
+  .hani-story h2{font-size:44px;line-height:1.2;margin:0 0 55px}
+  .story-content{max-width:700px;margin:0 auto}
+  .story-content p{font-size:18px;line-height:1.8;color:#6B6151;margin:0 0 30px}
+  .story-content strong{color:#2B2622;font-weight:800}
+  .story-ending{margin-top:45px !important;padding-top:32px;border-top:1px solid #E7D8BE}
+  @media (max-width:700px){.hani-story{padding:75px 22px}.hani-story h2{font-size:34px;margin-bottom:40px}.story-content p{font-size:17px}}
 </style>
 </head>
 <body>
-
 <nav style="background:#FAF4E7; padding:22px 24px; border-bottom:1px solid #E7D8BE;">
   <div style="max-width:1120px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:30px; flex-wrap:wrap;">
-
-    <a href="index.html" style="font-size:20px; font-weight:800; color:#2B2622;">
-      Hani, Speaking
-    </a>
-
+    <a href="index.html" style="font-size:20px; font-weight:800; color:#2B2622;">Hani, Speaking</a>
     <div style="display:flex; gap:28px; align-items:center; flex-wrap:wrap;">
       <a href="index.html" style="color:#4F4740;">Home</a>
       <a href="30-day-challenge-landing.html" style="color:#4F4740;">Free Guide</a>
-      <a href="blog/" style="color:#4F4740;">Blog</a>
       <a href="book.html" style="color:#4F4740;">Book</a>
     </div>
-
   </div>
 </nav>
-  <section id="hero">
-    <div class="wrap">
-    <div class="col">
-      <span class="eyebrow">Hani, Speaking</span>
-      <h1 style="margin-top:22px"><span class="hero-line">Speak Korean</span><span class="hero-line">the way Koreans <span style="color:#D9942F">actually do.</span></span></h1>
-      <p class="lead" style="margin-top:24px">Learn real Korean patterns, practice speaking and writing,<br>and make Korean part of your everyday life.</p>
-      <div class="cta-row">
-        <a class="btn" href="30-day-challenge-landing.html">Get the Free Guide ↗</a>
-      </div>
-    </div>
-  </div>
+<section id="hero">
+  <div class="wrap"><div class="col">
+    <span class="eyebrow">Hani, Speaking</span>
+    <h1 style="margin-top:22px"><span class="hero-line">Speak Korean</span><span class="hero-line">the way Koreans <span style="color:#D9942F">actually do.</span></span></h1>
+    <p class="lead" style="margin-top:24px">Learn real Korean patterns, practice speaking and writing,<br>and make Korean part of your everyday life.</p>
+    <div class="cta-row"><a class="btn" href="30-day-challenge-landing.html">Get the Free Guide ↗</a></div>
+  </div></div>
 </section>
-
 <section id="story">
   <div class="wrap">
     <h2>Speak it naturally</h2>
-    <div class="block">
-      <div class="stanza">
-        <p>You know the words.</p>
-        <p>You know the grammar.</p>
-        <p>But when it's time to speak, Korean still doesn't come naturally.</p>
-      </div>
-      <div class="stanza">
-        <p>Because Korean is more than something you study.</p>
-        <p>It's something you experience every day.</p>
-      </div>
-    </div>
-
+    <div class="block"><div class="stanza"><p>You know the words.</p><p>You know the grammar.</p><p>But when it's time to speak, Korean still doesn't come naturally.</p></div><div class="stanza"><p>Because Korean is more than something you study.</p><p>It's something you experience every day.</p></div></div>
     <div class="rule"></div>
-
     <h2>Dive into Korean</h2>
-    <div class="block">
-      <div class="stanza">
-        <p>You don't have to study Korean all day.</p>
-        <p>Just start using it every day.</p>
-      </div>
-      <div class="stanza">
-        <p>Think and write in Korean.</p>
-        <p>Talk in Korean.</p>
-        <p>Make mistakes.</p>
-        <p>Try again.</p>
-      </div>
-      <p class="close">That's how Korean becomes part of you.</p>
-    </div>
+    <div class="block"><div class="stanza"><p>You don't have to study Korean all day.</p><p>Just start using it every day.</p></div><div class="stanza"><p>Think and write in Korean.</p><p>Talk in Korean.</p><p>Make mistakes.</p><p>Try again.</p></div><p class="close">That's how Korean becomes part of you.</p></div>
   </div>
 </section>
-
-<section id="principles">
-  <div class="wrap">
-    <div class="head">
-      <p>Don't study Korean.</p>
-      <h2>Practice it</h2>
-    </div>
-    <div class="grid3">
-      <div class="pcard">
-        <div class="t"><span>No</span> Grammar</div>
-        <p>Don't build sentences from rules.<br><strong>Learn the patterns.</strong></p>
-      </div>
-      <div class="pcard">
-  <div class="t"><span style="color:#C0512F;">No</span> Translating</div>
-  <p>Don't translate into Korean.<br><strong>Think, write, and speak in Korean.</strong></p>
-</div>
-
-<div class="pcard">
-    <div class="t"><span>No</span> Memorizing</div>
-    <p>Don't memorize words in isolation.<br><strong>Learn them in context.</strong></p>
-</div>
-
-</div>
-</section>
-
-<section id="method">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">The method</span>
-      <h2>How it works</h2>
-    </div>
-    <div class="grid3">
-      <div>
-         <div class="thumb"><img src="images/immerse.jpg" alt="Immerse" style="width:100%; height:100%; object-fit:cover;"></div>
-        <h3>Immerse</h3>
-        <p>Don't wait for study time to use Korean. Bring Korean into the little moments of your day.</p>
-      </div>
-      <div>
-        <div class="thumb"><img src="images/practice.jpg" alt="Practice Korean" style="width:100%; height:100%; object-fit:cover;"></div>
-        <h3>Practice</h3>
-        <p>Think in Korean instead of translating from your first language. Say what you're thinking, even when it's not perfect.</p>
-      </div>
-      <div>
-        <div class="thumb"><img src="images/make-it-yours.jpg" alt="Make it yours" style="width:100%; height:100%; object-fit:cover;"></div>
-        <h3>Make it yours</h3>
-        <p>Don't just memorize phrases and move on. Use the ones you like until they become your own.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="products">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Real Korean Patterns</span>
-      <h2>Take your Korean further</h2>
-    </div>
-    <div class="single-product">
-      <article class="prod">
-        <div class="thumb" style="padding:24px; background:#fff; box-sizing:border-box; aspect-ratio:1.7/1;">
-          <img src="images/real-korean-patterns.png" alt="Real Korean Patterns Book 1" style="width:100%; height:100%; object-fit:cover; display:block; border-radius:20px;">
-        </div>
-        <div class="body">
-          <h3>Real Korean Patterns Book 1</h3>
-          <p class="desc">30 practical Korean patterns Koreans actually use in everyday conversations.</p>
-          <div class="feats">
-            <div class="feat"><span class="tick">✓</span> Real-life situations</div>
-            <div class="feat"><span class="tick">✓</span> Natural examples</div>
-            <div class="feat"><span class="tick">✓</span> Speaking practice</div>
-            <div class="feat"><span class="tick">✓</span> Audio included</div>
-          </div>
-          <a class="btn" href="book.html">Get the Book</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-<section class="hani-story">
-  <div class="story-wrap">
-
-    <p class="story-eyebrow">WHY HANI SPEAKING</p>
-    <h2>Why I created Hani Speaking</h2>
-
-    <div class="story-content">
-      <p>
-        I've taught Korean for over seven years, and I kept seeing the same problem.
-        Learners studied a lot, but still struggled to speak naturally.
-      </p>
-
-      <p>
-        I realized they didn't need more materials.<br><br>
-<strong>They needed more chances to actually use Korean.</strong>
-      </p>
-
-      <p>
-        So I created Hani Speaking, not to teach you more Korean,
-        but to help you practice the Korean you already know until it feels like your own.
-      </p>
-
-      <p class="story-ending">
-        Learn the patterns. Understand the context. Practice every day.<br>
-        <strong>Make Korean part of your everyday life.</strong>
-      </p>
-    </div>
-
-  </div>
-</section>
-<section id="contact">
-  <div class="wrap">
-    <div>
-      <span class="eyebrow">Your turn</span>
-      <h2>Ready to make Korean part of your everyday life?</h2>
-      <div class="steps">
-        <div class="step"><span class="num">1</span><span>Start small.</span></div>
-        <div class="step"><span class="num">2</span><span>Practice every day.</span></div>
-        <div class="step"><span class="num">3</span><span>And make Korean yours.</span></div>
-      </div>
-    </div>
-
-    <div class="form">
-      <div class="who">
-        <div class="avatar">
-  <img src="images/photo2.jpg" alt="Hani" style="width:100%; height:100%; object-fit:cover;">
-</div>
-        <div>
-          <p class="nm">Hani ssaem</p>
-          <p class="sub">Usually replies within a day</p>
-        </div>
-      </div>
-      <h3>Ask Hani 1:1 — free</h3>
-      <p class="hint">Tell me where you're stuck and I'll suggest where to start.</p>
-      <!-- 폼 연결: Formspree 등에서 받은 주소를 action에 넣으세요 (GitHub Pages는 서버가 없어 폼 처리 서비스가 필요합니다) -->
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <label><input type="email" name="email" placeholder="Your email" required></label>
-        <label><textarea name="message" placeholder="What would you like to ask?" required></textarea></label>
-        <button class="btn" type="submit">Send my question</button>
-      </form>
-      <p class="fine">Free · No obligation to buy</p>
-    </div>
-  </div>
-</section>
-
+<section id="principles"><div class="wrap"><div class="head"><p>Don't study Korean.</p><h2>Practice it</h2></div><div class="grid3"><div class="pcard"><div class="t"><span>No</span> Grammar</div><p>Don't build sentences from rules.<br><strong>Learn the patterns.</strong></p></div><div class="pcard"><div class="t"><span style="color:#C0512F;">No</span> Translating</div><p>Don't translate into Korean.<br><strong>Think, write, and speak in Korean.</strong></p></div><div class="pcard"><div class="t"><span>No</span> Memorizing</div><p>Don't memorize words in isolation.<br><strong>Learn them in context.</strong></p></div></div></div></section>
+<section id="method"><div class="wrap"><div class="head"><span class="eyebrow">The method</span><h2>How it works</h2></div><div class="grid3"><div><div class="thumb"><img src="images/immerse.jpg" alt="Immerse" style="width:100%; height:100%; object-fit:cover;"></div><h3>Immerse</h3><p>Don't wait for study time to use Korean. Bring Korean into the little moments of your day.</p></div><div><div class="thumb"><img src="images/practice.jpg" alt="Practice Korean" style="width:100%; height:100%; object-fit:cover;"></div><h3>Practice</h3><p>Think in Korean instead of translating from your first language. Say what you're thinking, even when it's not perfect.</p></div><div><div class="thumb"><img src="images/make-it-yours.jpg" alt="Make it yours" style="width:100%; height:100%; object-fit:cover;"></div><h3>Make it yours</h3><p>Don't just memorize phrases and move on. Use the ones you like until they become your own.</p></div></div></div></section>
+<section id="products"><div class="wrap"><div class="head"><span class="eyebrow">Real Korean Patterns</span><h2>Take your Korean further</h2></div><div class="single-product"><article class="prod"><div class="thumb" style="padding:24px; background:#fff; box-sizing:border-box; aspect-ratio:1.7/1;"><img src="images/real-korean-patterns.png" alt="Real Korean Patterns Book 1" style="width:100%; height:100%; object-fit:cover; display:block; border-radius:20px;"></div><div class="body"><h3>Real Korean Patterns Book 1</h3><p class="desc">30 practical Korean patterns Koreans actually use in everyday conversations.</p><div class="feats"><div class="feat"><span class="tick">✓</span> Real-life situations</div><div class="feat"><span class="tick">✓</span> Natural examples</div><div class="feat"><span class="tick">✓</span> Speaking practice</div><div class="feat"><span class="tick">✓</span> Audio included</div></div><a class="btn" href="book.html">Get the Book</a></div></article></div></div></section>
+<section class="hani-story"><div class="story-wrap"><p class="story-eyebrow">WHY HANI SPEAKING</p><h2>Why I created Hani Speaking</h2><div class="story-content"><p>I've taught Korean for over seven years, and I kept seeing the same problem. Learners studied a lot, but still struggled to speak naturally.</p><p>I realized they didn't need more materials.<br><br><strong>They needed more chances to actually use Korean.</strong></p><p>So I created Hani Speaking, not to teach you more Korean, but to help you practice the Korean you already know until it feels like your own.</p><p class="story-ending">Learn the patterns. Understand the context. Practice every day.<br><strong>Make Korean part of your everyday life.</strong></p></div></div></section>
+<section id="contact"><div class="wrap"><div><span class="eyebrow">Your turn</span><h2>Ready to make Korean part of your everyday life?</h2><div class="steps"><div class="step"><span class="num">1</span><span>Start small.</span></div><div class="step"><span class="num">2</span><span>Practice every day.</span></div><div class="step"><span class="num">3</span><span>And make Korean yours.</span></div></div></div><div class="form"><div class="who"><div class="avatar"><img src="images/photo2.jpg" alt="Hani" style="width:100%; height:100%; object-fit:cover;"></div><div><p class="nm">Hani ssaem</p><p class="sub">Usually replies within a day</p></div></div><h3>Ask Hani 1:1 — free</h3><p class="hint">Tell me where you're stuck and I'll suggest where to start.</p><form action="https://formspree.io/f/YOUR_FORM_ID" method="POST"><label><input type="email" name="email" placeholder="Your email" required></label><label><textarea name="message" placeholder="What would you like to ask?" required></textarea></label><button class="btn" type="submit">Send my question</button></form><p class="fine">Free · No obligation to buy</p></div></div></section>
 <footer>© 2026 Hani, Speaking · <a href="https://payhip.com/KoreanHani" style="color:#F5C877">Store</a></footer>
-
 </body>
 </html>

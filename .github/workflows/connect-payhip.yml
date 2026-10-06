@@ -1,0 +1,40 @@
+name: Connect Payhip checkout
+
+on:
+  push:
+    paths:
+      - '.github/workflows/connect-payhip.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch-book-link:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Connect eBook button to Payhip
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path('book.html')
+          text = path.read_text(encoding='utf-8')
+          pattern = re.compile(r'(<a\b[^>]*?)href=(["\'])#\2([^>]*>\s*Get the eBook · \$15\s*</a>)', re.S)
+
+          def replace(match):
+              return match.group(1) + 'href="https://payhip.com/b/xtdUv"' + match.group(3)
+
+          updated, count = pattern.subn(replace, text, count=1)
+          if count != 1:
+              raise SystemExit(f'Expected exactly one eBook CTA match, found {count}')
+          path.write_text(updated, encoding='utf-8')
+          PY
+      - name: Commit change
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add book.html
+          git commit -m "Connect eBook button to Payhip"
+          git push

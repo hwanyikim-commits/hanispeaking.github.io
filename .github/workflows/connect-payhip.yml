@@ -21,14 +21,31 @@ jobs:
 
           path = Path('book.html')
           text = path.read_text(encoding='utf-8')
-          pattern = re.compile(r'(<a\b[^>]*?)href=(["\'])#\2([^>]*>\s*Get the eBook · \$15\s*</a>)', re.S)
+          needle = 'Get the eBook'
+          idx = text.find(needle)
+          if idx == -1:
+              raise SystemExit('Could not find the eBook CTA text')
 
-          def replace(match):
-              return match.group(1) + 'href="https://payhip.com/b/xtdUv"' + match.group(3)
+          start = text.rfind('<a', 0, idx)
+          end = text.find('>', start)
+          if start == -1 or end == -1:
+              raise SystemExit('Could not locate the anchor tag for the eBook CTA')
 
-          updated, count = pattern.subn(replace, text, count=1)
-          if count != 1:
-              raise SystemExit(f'Expected exactly one eBook CTA match, found {count}')
+          tag = text[start:end + 1]
+          if 'href=' in tag:
+              new_tag, count = re.subn(
+                  r'href\s*=\s*(["\']).*?\1',
+                  'href="https://payhip.com/b/xtdUv"',
+                  tag,
+                  count=1,
+                  flags=re.S,
+              )
+              if count != 1:
+                  raise SystemExit('Could not replace the existing href')
+          else:
+              new_tag = tag[:-1] + ' href="https://payhip.com/b/xtdUv">'
+
+          updated = text[:start] + new_tag + text[end + 1:]
           path.write_text(updated, encoding='utf-8')
           PY
       - name: Commit change

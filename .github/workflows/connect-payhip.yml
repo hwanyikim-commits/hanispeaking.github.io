@@ -32,16 +32,22 @@ jobs:
               raise SystemExit('Could not locate the anchor tag for the eBook CTA')
 
           tag = text[start:end + 1]
-          if 'href=' in tag:
-              new_tag, count = re.subn(
-                  r'href\s*=\s*(["\']).*?\1',
-                  'href="https://payhip.com/b/xtdUv"',
-                  tag,
-                  count=1,
-                  flags=re.S,
-              )
-              if count != 1:
-                  raise SystemExit('Could not replace the existing href')
+          match = re.search(r'\bhref\s*=\s*', tag, flags=re.I)
+          if match:
+              value_start = match.end()
+              if value_start >= len(tag):
+                  raise SystemExit('Malformed href attribute')
+              quote = tag[value_start] if tag[value_start] in ('"', "'") else None
+              if quote:
+                  value_end = tag.find(quote, value_start + 1)
+                  if value_end == -1:
+                      raise SystemExit('Unclosed href quote')
+                  new_tag = tag[:value_start] + '"https://payhip.com/b/xtdUv"' + tag[value_end + 1:]
+              else:
+                  value_end = value_start
+                  while value_end < len(tag) and not tag[value_end].isspace() and tag[value_end] != '>':
+                      value_end += 1
+                  new_tag = tag[:value_start] + '"https://payhip.com/b/xtdUv"' + tag[value_end:]
           else:
               new_tag = tag[:-1] + ' href="https://payhip.com/b/xtdUv">'
 

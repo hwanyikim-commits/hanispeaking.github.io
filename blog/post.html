@@ -20,10 +20,10 @@
 <nav class="site-nav"><div class="nav-inner"><a class="brand" href="../index.html">Hani, Speaking</a><div class="nav-links"><a href="../index.html">Home</a><a href="../free-resources.html">Free Resources</a><a href="../30-day-challenge-landing.html">Free Guide</a><a class="active" href="./">Blog</a><a href="../book.html">Book</a></div></div></nav>
 <script>
 if (new URLSearchParams(location.search).get('file') === '2026-10-09-aya-ji.md') {
-  const nav = document.querySelector('.nav-links');
-  if (nav) nav.innerHTML = '<a class="active" href="./">Blog</a>';
-  const brand = document.querySelector('.brand');
-  if (brand) brand.href = './';
+  document.querySelector('.site-nav')?.remove();
+  const style = document.createElement('style');
+  style.textContent = '.back { display: none !important; } .wrap { padding-top: 46px; }';
+  document.head.appendChild(style);
 }
 </script>
 <main id="page"><div class="error">Loading post...</div></main>

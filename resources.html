@@ -134,12 +134,16 @@
 #resources-hero .lead{max-width:680px;margin:20px auto 0}
 #resources-hero h1{font-size:50px;white-space:normal}
 .resource-section{background:var(--white);padding:72px 24px 96px}
-.resource-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;max-width:960px;margin:auto}
+.resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;max-width:1180px;margin:auto}
 .resource-card{border:1px solid var(--card-line);background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 12px 32px -22px rgba(60,45,20,.3)}
 .resource-cover{min-height:230px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:25px;background:#F4E5C8;color:var(--brown)}
 .resource-cover.alt{background:#EEE3DC}
+.resource-cover.challenge{background:#E9E8DF}
+.challenge-files{font-size:14px;line-height:1.7;color:var(--muted)}
+.challenge-files a{font-weight:700;margin-right:10px;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:1050px) and (min-width:701px){.resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .resource-cover .small{font-weight:700;letter-spacing:.17em;text-transform:uppercase;font-size:12px;color:#916A31}
-.resource-cover .big{font-size:28px;font-weight:800;line-height:1.2;margin-top:13px}
+.resource-cover .big{font-size:25px;font-weight:800;line-height:1.2;margin-top:13px}
 .resource-content{padding:30px;display:flex;flex:1;flex-direction:column;align-items:flex-start;gap:14px}
 .resource-content p{font-size:16px;line-height:1.65;color:var(--muted)}
 .resource-content .btn{margin-top:auto;font-size:16px;padding:15px 26px}
@@ -169,38 +173,42 @@
 <section id="resources-hero"><div class="wrap">
   <span class="eyebrow">Hani, Speaking</span>
   <h1 style="margin-top:19px">Free Korean Resources</h1>
-  <p class="lead">Start with a free guide, discover how Korean works in real life, and bring Korean into your everyday conversations.</p>
+  <p class="lead">Explore free Korean guides and download what you need. New learning resources will be added here.</p>
 </div></section>
 <section class="resource-section"><div class="resource-grid">
   <article class="resource-card">
-    <div class="resource-cover"><span class="small">Free PDF Guide</span><span class="big">10 Everyday<br>Korean Patterns</span></div>
+    <div class="resource-cover"><span class="small">Free PDF Guide</span><span class="big">Textbook Korean<br>vs Real Korean</span></div>
     <div class="resource-content">
-      <span class="resource-tag">AVAILABLE NOW · FREE PDF</span>
-      <h3>10 Free Korean Patterns</h3>
-      <p>Discover practical patterns that help you sound more natural in everyday Korean.</p>
-      <a class="btn" href="#free-signup">Get Free Access ↓</a>
+      <span class="resource-tag">FREE PDF · 10 EXPRESSIONS</span>
+      <h3>10 Textbook vs Real Korean Expressions</h3>
+      <p>Compare textbook Korean with what people actually say in everyday conversations.</p>
+      <a class="btn" href="https://drive.google.com/uc?export=download&amp;id=1WZfLPvohKkgkUSk4SWkuZ2hHOZQD8Ccz" target="_blank" rel="noopener noreferrer" aria-label="Download Textbook versus Real Korean 10 expressions PDF">Download PDF ↓</a>
     </div>
   </article>
   <article class="resource-card">
-    <div class="resource-cover alt"><span class="small">Korean Culture</span><span class="big">3 Things to Know<br>About Korean Culture</span></div>
+    <div class="resource-cover alt"><span class="small">Korean Culture · Free PDF</span><span class="big">3 Things to Know<br>About Korean Culture</span></div>
     <div class="resource-content">
-      <span class="resource-tag">COMING SOON</span>
+      <span class="resource-tag">FREE PDF · KOREAN CULTURE</span>
       <h3>3 Korean Culture Essentials</h3>
-      <p>Explore cultural ideas that help you understand Korean expressions and conversations in context.</p>
-      <span class="soon" aria-label="This guide is not yet available">Coming soon</span>
+      <p>Learn how 눈치, 겸손, and 정 help you understand Korean people and everyday expressions.</p>
+      <a class="btn" href="https://drive.google.com/uc?export=download&amp;id=1QYjpON_Jch1Neqa3KBBGVhjGLdNDppus" target="_blank" rel="noopener noreferrer" aria-label="Download three Korean culture essentials PDF">Download PDF ↓</a>
+    </div>
+  </article>
+  <article class="resource-card">
+    <div class="resource-cover challenge"><span class="small">Free Korean Challenge</span><span class="big">30-Day Korean<br>Speaking Challenge</span></div>
+    <div class="resource-content">
+      <span class="resource-tag">FREE CHALLENGE · 30 DAYS</span>
+      <h3>30-Day Korean Speaking Challenge</h3>
+      <p>Build a consistent Korean speaking habit with a 30-day guide and a progress tracker.</p>
+      <div class="challenge-files">Direct downloads:
+        <a href="https://drive.google.com/uc?export=download&amp;id=1I7RSrqR3f8pNrF2SuQh6oqBv_CvNMyEE" target="_blank" rel="noopener noreferrer">English ↓</a>
+        <a href="https://drive.google.com/uc?export=download&amp;id=1gqvehhkVum44dRuGSKYcLTLjXbd-XDle" target="_blank" rel="noopener noreferrer">한국어 ↓</a>
+        <a href="https://drive.google.com/uc?export=download&amp;id=1ZpKcUyam3kwdWFVvHwohMn9icNX_RqKH" target="_blank" rel="noopener noreferrer">Tracker ↓</a>
+      </div>
+      <a class="btn" href="https://drive.google.com/drive/folders/1tq4PkvAdDAUX0_MRTSSz-JxL64sGbrRr" target="_blank" rel="noopener noreferrer">Open Challenge Folder ↗</a>
     </div>
   </article>
 </div></section>
-<section id="free-signup" style="background:#FAF4E7;padding:70px 24px 80px;scroll-margin-top:24px">
-  <div class="wrap" style="max-width:940px;text-align:center">
-    <span class="eyebrow">Your free learning library</span>
-    <p style="font-size:17px;line-height:1.6;color:#6B6151;margin:12px auto 28px;max-width:650px">One email signup for all current and future free Korean resources. Check your inbox for access information.</p>
-    <div class="emailoctopus-form" style="max-width:850px;margin:0 auto">
-      <script async src="https://eomail5.com/form/394e811c-9ca5-11f1-8f5a-23a85795abfa.js" data-form="394e811c-9ca5-11f1-8f5a-23a85795abfa"></script>
-    </div>
-    <p style="font-size:14px;line-height:1.5;color:#6B6151;margin:22px auto 0">Already subscribed? Use the access link in your email, or <a href="mailto:amazingkoreanspeaking@gmail.com?subject=Free%20Resources%20Access">email Hani</a> for help.</p>
-  </div>
-</section>
 <section class="resource-book"><div class="wrap">
   <span class="eyebrow">Real Korean Patterns Book 1</span>
   <h2>Ready to practice more?</h2>

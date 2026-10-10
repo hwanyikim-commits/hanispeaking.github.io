@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>1:1 Korean Lessons with Hani | Hani, Speaking</title>
-<meta name="description" content="Personalized 1:1 Korean speaking lessons with Hani. See lesson details, pricing, and inquire by email.">
+<meta name="description" content="Personalized 1:1 Korean lessons with Hani. Speaking and writing practice for beginner to advanced learners, flexible online classes, packages and Instagram DM inquiries.">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" rel="stylesheet">
 <style>
@@ -162,6 +162,75 @@
 .lesson-contact .addr{font-size:14px;margin-top:14px}
 @media(max-width:850px){.lesson-grid{grid-template-columns:1fr}.lesson-details{grid-template-columns:1fr}}
 @media(max-width:700px){#lesson-hero{padding:65px 20px}#lesson-hero h1{font-size:35px}.lesson-section{padding:58px 20px}.lesson-center h2,.lesson-contact h2{font-size:29px}.lesson-hero-cta{flex-direction:column;align-items:stretch}.lesson-contact{padding:64px 20px}}
+
+/* Lesson-page layout refinement */
+#lesson-hero{position:relative;background:linear-gradient(150deg,#FAF4E7 0%,#FFF9EE 100%);padding:94px 24px 78px}
+#lesson-hero h1{max-width:780px;font-size:clamp(36px,5.4vw,62px);line-height:1.12;letter-spacing:-.035em}
+#lesson-hero h1 em{font-style:normal;color:#B66E2F}
+#lesson-hero .lead{max-width:670px;line-height:1.65}
+.lesson-hero-cta{margin-top:32px}
+.lesson-hero-cta .btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px}
+.lesson-hero-note{color:var(--muted);font-size:14px;margin-top:22px}
+.lesson-fastfacts{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin:32px auto 0}
+.lesson-fastfacts span{padding:10px 16px;border:1px solid #E7D8BE;border-radius:999px;background:rgba(255,255,255,.62);color:#65533F;font-size:14px;font-weight:650}
+.lesson-section{padding:86px 24px}
+.lesson-center{max-width:800px;margin:0 auto 36px;text-align:center}
+.lesson-center h2{font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.025em;margin-top:12px}
+.lesson-center p{font-size:17px;line-height:1.7;color:var(--muted);margin:15px auto 0;max-width:670px}
+.lesson-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.lesson-grid.five{grid-template-columns:repeat(6,minmax(0,1fr))}
+.lesson-grid.five .lesson-card{grid-column:span 2}
+.lesson-grid.five .lesson-card:nth-last-child(2){grid-column:2/span 2}
+.lesson-grid.five .lesson-card:last-child{grid-column:4/span 2}
+.lesson-card{border:1px solid #EAE0D0;border-radius:18px;padding:30px 28px;box-shadow:0 10px 28px -24px rgba(60,45,20,.38)}
+.lesson-card h3{line-height:1.4;margin-bottom:12px}
+.lesson-card p{line-height:1.68}
+.lesson-card .mini{color:var(--amber-dk);font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.lesson-value{display:flex;align-items:flex-start;gap:14px}
+.lesson-value .value-icon{flex:none;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:13px;background:var(--cream);font-size:22px}
+.lesson-value .value-copy{flex:1}
+.lesson-value h3{font-size:19px}
+.lesson-levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.lesson-level{border:1px solid var(--card-line);border-radius:20px;background:#fff;padding:32px 27px;display:flex;flex-direction:column}
+.lesson-level .level-chip{display:inline-block;align-self:start;font-size:13px;font-weight:800;color:#795125;background:#FAEBD1;padding:8px 12px;border-radius:40px}
+.lesson-level h3{font-size:26px;margin:16px 0 11px}
+.lesson-level .summary{font-size:15px;line-height:1.65;color:var(--muted);margin-bottom:18px}
+.lesson-level ul{padding-left:20px;margin:0;display:grid;gap:11px}
+.lesson-level li{font-size:15px;line-height:1.65;color:var(--body);padding-left:1px}
+.lesson-level .daily{margin-top:auto;padding-top:20px}
+.lesson-level .daily-inner{padding:15px 16px;background:var(--cream);border-radius:12px;font-size:14px;line-height:1.6;color:var(--body)}
+.lesson-level .daily-inner strong{display:block;color:var(--ink);margin-bottom:5px}
+.lesson-details{margin-top:0;max-width:1050px;gap:18px}
+.lesson-detail{padding:25px;border:1px solid var(--card-line);border-radius:16px;line-height:1.65}
+.lesson-detail strong{font-size:17px;color:var(--ink);margin-bottom:8px}
+.lesson-price-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;max-width:1120px;margin:auto}
+.lesson-price{display:flex;flex-direction:column;gap:9px;background:#fff;border:1px solid var(--card-line);border-radius:17px;padding:26px 17px;min-width:0}
+.lesson-price .plan{font-size:16px;font-weight:800;min-height:40px;line-height:1.4}
+.lesson-price .duration{font-size:14px;color:var(--muted)}
+.lesson-price .usd{font-size:30px;font-weight:850;line-height:1.15;letter-spacing:-.03em;margin-top:6px}
+.lesson-price .krw{font-size:14px;color:var(--muted)}
+.lesson-price .coaching{font-size:13px;color:#8B4D2B;font-weight:800;border-top:1px solid #EFE7D9;margin-top:auto;padding-top:14px}
+.lesson-price.highlight{border:2px solid #DAA54F;background:#FFFDF8}
+.lesson-pricing-actions{text-align:center;margin-top:32px}
+.lesson-pricing-actions .btn{font-size:16px}
+.lesson-note{max-width:1060px;text-align:center;margin-top:18px}
+.lesson-contact{padding:86px 24px}
+.lesson-contact h2{max-width:850px}
+.lesson-contact p{max-width:660px}
+.lesson-contact .contact-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:29px}
+.lesson-contact .contact-actions .btn{margin-top:0;min-height:56px;display:inline-flex;align-items:center;justify-content:center;font-size:17px}
+.lesson-contact .contact-actions .btn.secondary{background:#fff;color:#4A3520;box-shadow:none}
+.lesson-contact .contact-actions .btn.secondary:hover{background:#FAF4E7}
+.lesson-contact .inquiry-box{max-width:710px;margin:29px auto 0;border:1px solid rgba(255,255,255,.3);border-radius:16px;text-align:left;padding:23px 27px}
+.lesson-contact .inquiry-box h3{font-size:17px;color:#fff;margin-bottom:13px}
+.lesson-contact .inquiry-box ul{display:grid;gap:8px;padding-left:21px;margin:0}
+.lesson-contact .inquiry-box li{color:#EFE4D2;font-size:15px;line-height:1.6}
+.lesson-contact .addr{margin-top:19px;font-size:14px}
+.lesson-contact .disclaimer{font-size:13px;color:#D5C4AB;line-height:1.6;margin-top:16px}
+@media(max-width:1000px){.lesson-price-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.lesson-levels{grid-template-columns:1fr}.lesson-level .daily{margin-top:6px}.lesson-grid.five{grid-template-columns:repeat(2,minmax(0,1fr))}.lesson-grid.five .lesson-card,.lesson-grid.five .lesson-card:nth-last-child(2),.lesson-grid.five .lesson-card:last-child{grid-column:auto}}
+@media(max-width:700px){#lesson-hero{padding:70px 20px 62px}#lesson-hero h1{font-size:clamp(34px,9vw,45px)}.lesson-section{padding:62px 20px}.lesson-grid,.lesson-grid.five,.lesson-details{grid-template-columns:1fr}.lesson-price-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.lesson-contact{padding:67px 20px}.lesson-contact .contact-actions{flex-direction:column;align-items:stretch}.lesson-contact .inquiry-box{padding:21px 20px}.lesson-fastfacts{gap:9px}.lesson-fastfacts span{font-size:12px;padding:9px 12px}.lesson-level{padding:28px 24px}}
+@media(max-width:450px){.lesson-price-grid{grid-template-columns:1fr}.lesson-price{display:grid;grid-template-columns:1fr auto;gap:7px 10px}.lesson-price .plan{min-height:auto;grid-column:1}.lesson-price .duration{grid-column:1}.lesson-price .usd{grid-column:2;grid-row:1/3;margin-top:0;text-align:right}.lesson-price .krw{grid-column:2;text-align:right}.lesson-price .coaching{grid-column:1/-1;margin-top:9px}}
+
 </style>
 </head>
 <body>
@@ -176,61 +245,144 @@
     </div>
   </div>
 </nav>
+
 <main>
 <section id="lesson-hero">
-<div class="wrap">
-<span class="eyebrow">Learn with Hani</span>
-<h1>Make Korean your own with 1:1 lessons</h1>
-<p class="lead">Personalized Korean speaking and writing lessons, built around your level, interests, and everyday life.</p>
-<div class="lesson-hero-cta">
-<a class="btn" href="mailto:amazingkoreanspeaking@gmail.com?subject=1%3A1%20Korean%20Lesson%20Inquiry&body=Hi%20Hani%2C%0A%0AI'm%20interested%20in%20your%201%3A1%20Korean%20lessons.%0A%0AClass%20type%20(trial%20or%20regular)%3A%0AMy%20Korean%20level%3A%0AMy%20time%20zone%3A%0APreferred%20days%2Ftimes%3A%0AMy%20questions%3A%0A">✉ Ask About Lessons</a>
-<a class="btn btn-outline" href="#how-it-works">How Lessons Work ↓</a>
-</div>
-</div></section>
-<section class="lesson-section">
-<div class="wrap">
-<div class="lesson-center"><span class="eyebrow">Real Korean, real practice</span><h2>Learn by using Korean</h2></div>
-<p class="lesson-intro">Instead of relying only on textbooks, we'll practice expressing your ideas in Korean. Each session uses materials chosen for your goals, with feedback to help you speak more naturally.</p>
-<div class="lesson-grid" style="margin-top:42px">
-<div class="lesson-card"><h3>🗣 Speak naturally</h3><p>Practice conversations and expressions you can actually use, not just sentences to memorize.</p></div>
-<div class="lesson-card"><h3>✍️ Personalized feedback</h3><p>Use speaking and writing tasks to notice what you can improve and build confidence.</p></div>
-<div class="lesson-card"><h3>🌱 Keep practicing</h3><p>Short, regular practice between sessions helps your Korean become part of everyday life.</p></div>
-</div>
-</div></section>
+  <div class="wrap">
+    <span class="eyebrow">1:1 Korean lessons with Hani</span>
+    <h1>Understand Korean.<br><em>Start speaking it naturally.</em></h1>
+    <p class="lead">You already know some Korean. Now let's make it yours with personalized speaking, writing, and everyday practice.</p>
+    <div class="lesson-hero-cta">
+      <a class="btn" href="https://ig.me/m/amazing_korean_speaking" target="_blank" rel="noopener noreferrer" aria-label="Ask Hani about Korean lessons by Instagram direct message">💬 Ask Hani on Instagram</a>
+      <a class="btn btn-outline" href="#lesson-levels">Explore Classes ↓</a>
+    </div>
+    <div class="lesson-fastfacts"><span>1:1 live online</span><span>Beginner → Advanced</span><span>50-minute lessons</span><span>Flexible scheduling</span></div>
+    <p class="lesson-hero-note">New to my classes? A 25-minute trial lesson is available.</p>
+  </div>
+</section>
+
+<section class="lesson-section" id="who-its-for">
+  <div class="wrap">
+    <div class="lesson-center">
+      <span class="eyebrow">Does this sound familiar?</span>
+      <h2>Who is this class for?</h2>
+      <p>Made for learners who want to move beyond studying Korean and start using it in their own lives.</p>
+    </div>
+    <div class="lesson-grid five">
+      <article class="lesson-card"><h3>📘 You understand, but can't speak</h3><p>You know vocabulary and grammar, yet the words don't come naturally in conversation.</p></article>
+      <article class="lesson-card"><h3>🗣 You need a speaking environment</h3><p>You want regular conversation practice but don't have a Korean-speaking partner or consistent guidance.</p></article>
+      <article class="lesson-card"><h3>🧭 You feel lost about studying</h3><p>You're unsure what to practice first, how to organize your learning, or how to make progress.</p></article>
+      <article class="lesson-card"><h3>☕ You want real-life Korean</h3><p>You'd rather discuss your day, feelings, and experiences than repeat textbook conversations.</p></article>
+      <article class="lesson-card"><h3>🌱 You prefer a relaxed space</h3><p>You learn best with patient support, practical feedback, and room to make mistakes.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="lesson-section alt" id="class-principles">
+  <div class="wrap">
+    <div class="lesson-center">
+      <span class="eyebrow">My teaching approach</span>
+      <h2>Learn by actually using Korean</h2>
+      <p>Instead of following the same textbook for everyone, I build each class around you and the Korean you want to use.</p>
+    </div>
+    <div class="lesson-grid">
+      <article class="lesson-card lesson-value"><div class="value-icon">🗣</div><div class="value-copy"><h3>Conversation-based learning</h3><p>Speak and write about real situations using personalized materials prepared for each lesson, with detailed 1:1 feedback.</p></div></article>
+      <article class="lesson-card lesson-value"><div class="value-icon">🔁</div><div class="value-copy"><h3>Consistency over cramming</h3><p>Short, regular practice tasks—up to 30 minutes a day—help Korean stay with you between lessons.</p></div></article>
+      <article class="lesson-card lesson-value"><div class="value-icon">🧠</div><div class="value-copy"><h3>Core grammar and patterns</h3><p>Build essential grammar and expressions step by step, then make your own sentences with them.</p></div></article>
+      <article class="lesson-card lesson-value"><div class="value-icon">✍️</div><div class="value-copy"><h3>Learn through writing and speaking</h3><p>Turn what you've learned into language you can use, until forming Korean sentences feels more familiar.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="lesson-section" id="lesson-levels">
+  <div class="wrap">
+    <div class="lesson-center">
+      <span class="eyebrow">Personalized to your level</span>
+      <h2>What will we do in class?</h2>
+      <p>Each level is a starting point. Your lessons are adjusted to your interests, needs, and goals.</p>
+    </div>
+    <div class="lesson-levels">
+      <article class="lesson-level">
+        <span class="level-chip">🌟 Build a foundation</span><h3>Beginner</h3>
+        <p class="summary">Move from knowing basic grammar to making your own sentences.</p>
+        <ul><li>Learn essential grammar and everyday expression patterns for conversation.</li><li>Talk about your routine, what you did today, and what you're thinking.</li><li>Build confidence speaking in familiar situations.</li></ul>
+        <div class="daily"><div class="daily-inner"><strong>Daily practice</strong>Short writing and speaking tasks, plus simple Korean vocabulary quizzes (up to 30 minutes).</div></div>
+      </article>
+      <article class="lesson-level">
+        <span class="level-chip">🐤 Speak more naturally</span><h3>Intermediate</h3>
+        <p class="summary">Express your experiences and opinions beyond short textbook answers.</p>
+        <ul><li>Explore your interests and Korean or global topics through content you enjoy.</li><li>Combine reading, listening, writing, and speaking.</li><li>Practice more natural ways to share your thoughts and experiences.</li></ul>
+        <div class="daily"><div class="daily-inner"><strong>Daily practice</strong>Use practical expressions in your own sentences with short reading, listening, writing, and speaking tasks.</div></div>
+      </article>
+      <article class="lesson-level">
+        <span class="level-chip">✨ Go deeper</span><h3>Advanced</h3>
+        <p class="summary">Develop clearer, more confident Korean for longer conversations.</p>
+        <ul><li>Read Korean books and articles together.</li><li>Discuss complex topics, ideas, and opinions in Korean.</li><li>Practice long-form speaking and discussion with a focus on clarity and natural expression.</li></ul>
+        <div class="daily"><div class="daily-inner"><strong>Personalized focus</strong>Lesson content and speaking practice are adapted to your goals and the topics you want to explore.</div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section class="lesson-section alt" id="how-it-works">
-<div class="wrap">
-<div class="lesson-center"><span class="eyebrow">1:1 Korean class</span><h2>How lessons work</h2></div>
-<div class="lesson-details">
-<div class="lesson-detail"><strong>⏰ Session length</strong>Regular classes: 50 minutes · Trial: 25 minutes</div>
-<div class="lesson-detail"><strong>💻 Online</strong>Live on Zoom or Google Meet</div>
-<div class="lesson-detail"><strong>📚 All levels</strong>Beginner, intermediate, and advanced learners</div>
-<div class="lesson-detail"><strong>🗓 Scheduling</strong>Flexible scheduling subject to availability</div>
-<div class="lesson-detail"><strong>🎯 Tailored to you</strong>Topics and learning materials based on your goals</div>
-<div class="lesson-detail"><strong>📝 Lesson materials</strong>Shared via Notion or Google Drive</div>
-</div>
-</div></section>
-<section class="lesson-section">
-<div class="wrap">
-<div class="lesson-center"><span class="eyebrow">Class options</span><h2>Lesson pricing</h2></div>
-<div class="lesson-pricing"><table>
-<thead><tr><th>Class</th><th>Duration</th><th>Price</th></tr></thead>
-<tbody>
-<tr><td>Trial lesson</td><td>25 min</td><td>$11 USD (₩16,000)</td></tr>
-<tr><td>Single lesson</td><td>50 min</td><td>$25 USD (₩37,000)</td></tr>
-<tr><td>4-lesson pack</td><td>4 × 50 min</td><td>$100 USD (₩150,000)</td></tr>
-<tr><td>8-lesson pack</td><td>8 × 50 min</td><td>$180 USD (₩270,000)</td></tr>
-<tr><td>16-lesson pack</td><td>16 × 50 min</td><td>$350 USD (₩520,000)</td></tr>
-</tbody></table></div>
-<p class="lesson-note">Payment is handled via PayPal. A 5% PayPal transaction fee is not included. Please confirm availability before making any payment.</p>
-</div></section>
-<section class="lesson-contact">
-<div class="wrap">
-<span class="eyebrow" style="color:#F5C877">Your next step</span>
-<h2>Have a question about Korean lessons?</h2>
-<p>Tell me your Korean level, your time zone, and when you'd like to study. I'll reply personally by email.</p>
-<a class="btn" href="mailto:amazingkoreanspeaking@gmail.com?subject=1%3A1%20Korean%20Lesson%20Inquiry&body=Hi%20Hani%2C%0A%0AI'm%20interested%20in%20your%201%3A1%20Korean%20lessons.%0A%0AClass%20type%20(trial%20or%20regular)%3A%0AMy%20Korean%20level%3A%0AMy%20time%20zone%3A%0APreferred%20days%2Ftimes%3A%0AMy%20questions%3A%0A">✉ Email Hani About Lessons</a>
-<p class="addr">amazingkoreanspeaking@gmail.com</p>
-</div></section>
+  <div class="wrap">
+    <div class="lesson-center">
+      <span class="eyebrow">The essentials</span>
+      <h2>How the lessons work</h2>
+      <p>Private, practical classes with the flexibility to study around your life.</p>
+    </div>
+    <div class="lesson-details">
+      <div class="lesson-detail"><strong>⏳ Lesson length</strong>Regular lesson: 50 minutes<br>Trial lesson: 25 minutes</div>
+      <div class="lesson-detail"><strong>💻 Live online class</strong>Meet me 1:1 on Zoom or Google Meet.</div>
+      <div class="lesson-detail"><strong>📂 Materials in one place</strong>Lesson notes, personalized materials, and homework are shared via Notion or Google Drive.</div>
+      <div class="lesson-detail"><strong>🎯 Personalized approach</strong>Lesson topics, materials, and teaching style are adapted to your level, interests, and goals.</div>
+      <div class="lesson-detail"><strong>🗓 Flexible scheduling</strong>No fixed weekly schedule is required. Choose each session from my available times.</div>
+      <div class="lesson-detail"><strong>✍️ Practice beyond class</strong>Short, regular exercises help you keep using Korean between lessons.</div>
+    </div>
+  </div>
+</section>
+
+<section class="lesson-section" id="lesson-pricing">
+  <div class="wrap">
+    <div class="lesson-center">
+      <span class="eyebrow">Transparent pricing</span>
+      <h2>Choose the lesson option for you</h2>
+      <p>Try one lesson first, or choose a package for ongoing practice.</p>
+    </div>
+    <div class="lesson-price-grid">
+      <article class="lesson-price"><div class="plan">Trial lesson</div><div class="duration">25 minutes · 1 session</div><div class="usd">$11</div><div class="krw">₩16,000</div></article>
+      <article class="lesson-price"><div class="plan">Single lesson</div><div class="duration">50 minutes · 1 session</div><div class="usd">$25</div><div class="krw">₩37,000</div></article>
+      <article class="lesson-price"><div class="plan">4-lesson pack</div><div class="duration">50 minutes × 4</div><div class="usd">$100</div><div class="krw">₩150,000</div></article>
+      <article class="lesson-price highlight"><div class="plan">8-lesson pack</div><div class="duration">50 minutes × 8</div><div class="usd">$180</div><div class="krw">₩270,000</div><div class="coaching">✉ Premium Coaching</div></article>
+      <article class="lesson-price highlight"><div class="plan">16-lesson pack</div><div class="duration">50 minutes × 16</div><div class="usd">$350</div><div class="krw">₩520,000</div><div class="coaching">✉ Premium Coaching</div></article>
+    </div>
+    <p class="lesson-note">Payment via PayPal. The 5% PayPal transaction fee is not included in the listed prices. Ask me about Premium Coaching details for the 8- and 16-lesson packs. Please confirm availability before payment.</p>
+    <div class="lesson-pricing-actions"><a class="btn" href="#lesson-contact">Ask about lessons →</a></div>
+  </div>
+</section>
+
+<section class="lesson-contact" id="lesson-contact">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#F5C877">Let's talk</span>
+    <h2>Ready to practice Korean together?</h2>
+    <p>Have a question about classes, packages, or availability? Send me a message on Instagram or by email.</p>
+    <div class="contact-actions">
+      <a class="btn" href="https://ig.me/m/amazing_korean_speaking" target="_blank" rel="noopener noreferrer" aria-label="Message Hani on Instagram">💬 Send an Instagram DM</a>
+      <a class="btn secondary" href="mailto:amazingkoreanspeaking@gmail.com?subject=1%3A1%20Korean%20Lesson%20Inquiry&body=Hi%20Hani%2C%0AI'm%20interested%20in%20your%201%3A1%20Korean%20lessons.%0AClass%20type%20(trial%20or%20regular)%3A%0AKorean%20level%3A%0ATime%20zone%3A%0APreferred%20days%2Ftimes%3A%0AQuestions%3A">✉ Send an email</a>
+    </div>
+    <div class="inquiry-box">
+      <h3>What to include in your message</h3>
+      <ul>
+        <li>Trial lesson or regular lesson / package</li>
+        <li>Your Korean level</li>
+        <li>Your time zone and preferred days or times</li>
+        <li>Any questions or learning goals</li>
+      </ul>
+    </div>
+    <p class="addr">Instagram: @amazing_korean_speaking &nbsp;·&nbsp; amazingkoreanspeaking@gmail.com</p>
+    <p class="disclaimer">An inquiry does not reserve a lesson. I'll confirm availability and payment details before booking.</p>
+  </div>
+</section>
 </main>
 <footer>© 2026 Hani, Speaking · <a href="resources.html" style="color:#F5C877">Free Resources</a> · <a href="book.html" style="color:#F5C877">Book</a></footer>
 </body></html>

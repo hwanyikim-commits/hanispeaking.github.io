@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Resources | Hani, Speaking</title>
+<meta name="description" content="Free Korean learning resources from Hani Speaking. Start with 10 everyday Korean patterns and explore Korean culture.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF4E7; --white:#FFFFFF; --gray:#F6F4F0; --brown:#4A3520;
+    --ink:#2B2622; --body:#4F4740; --muted:#6B6151; --faint:#8A8172;
+    --amber:#EBAE4A; --amber-dk:#C68A2E; --amber-lt:#F5C877; --terra:#C0512F;
+    --line:#E7D8BE; --card-line:#E3DBCC;
+    --pad:104px; --maxw:1120px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+  a{color:var(--amber-dk);text-decoration:none}
+  a:hover{color:#A96E1C}
+  img{display:block;max-width:100%}
+  h1,h2,h3,p{margin:0}
+  section{padding:var(--pad) 24px}
+  .wrap{max-width:var(--maxw);margin:0 auto}
+  .eyebrow{font-size:14px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--amber-dk)}
+  h1{font-size:60px;line-height:1.15;font-weight:800;letter-spacing:-.025em;text-wrap:balance}
+  h2{font-size:44px;line-height:1.2;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
+  h3{font-size:21px;font-weight:800}
+  .lead{font-size:22px;line-height:1.55;font-weight:500;color:var(--muted)}
+  .btn{display:inline-block;border:none;cursor:pointer;font-family:inherit;white-space:nowrap;
+    padding:18px 40px;border-radius:999px;background:var(--amber);color:#3A2C10;font-size:18px;font-weight:800;
+    box-shadow:0 14px 30px -12px rgba(214,150,50,.85);transition:transform .15s ease,box-shadow .15s ease}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 18px 36px -12px rgba(214,150,50,.95)}
+  .btn-ghost{background:transparent;box-shadow:none;color:#5B5344;font-weight:600;padding:18px 24px}
+  .btn-ghost:hover{transform:none;box-shadow:none;color:var(--ink)}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+  .ph{width:100%;height:100%;background:#EFE4CE;border-radius:inherit;display:flex;align-items:center;
+    justify-content:center;font-size:13px;color:#A89577;text-align:center;padding:12px}
+  #hero{background:var(--cream);text-align:center}
+  #hero .col{max-width:900px;margin:0 auto;display:flex;flex-direction:column;align-items:center}
+  #hero h1 .hero-line{display:block;white-space:nowrap}
+  #hero .cta-row{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:40px;flex-wrap:wrap}
+  #story{background:var(--white);text-align:center}
+  #story .block{max-width:620px;margin:36px auto 0;display:flex;flex-direction:column;gap:26px}
+  #story .stanza{display:flex;flex-direction:column;gap:8px}
+  #story p{font-size:20px;line-height:1.6;color:var(--body)}
+  #story .close{font-weight:700;color:var(--ink)}
+  .rule{width:56px;height:2px;background:var(--line);margin:64px auto}
+  #principles{background:var(--gray)}
+  #principles .head{text-align:center;margin-bottom:60px}
+  #principles .head p{font-size:26px;line-height:1.35;font-weight:500;color:var(--muted)}
+  #principles .head h2{margin-top:8px}
+  .pcard{background:var(--white);border-radius:16px;padding:42px 32px;text-align:center;box-shadow:0 10px 30px -18px rgba(60,45,20,.25)}
+  .pcard .t{font-size:25px;font-weight:800;margin-bottom:16px}
+  .pcard .t span{color:var(--terra)}
+  .pcard p{font-size:17px;line-height:1.6;color:var(--muted)}
+  .pcard strong{color:var(--ink);font-weight:700}
+  #method{background:var(--white)}
+  #method .head{text-align:center;margin-bottom:56px}
+  #method .head h2{margin-top:16px}
+  #method .thumb{height:180px;border-radius:14px;overflow:hidden;background:#F1E7D2}
+  #method h3{margin:22px 0 10px}
+  #method p{font-size:16px;line-height:1.6;color:var(--muted)}
+  #products{background:var(--cream)}
+  #products .head{text-align:center;margin-bottom:56px}
+  #products .head h2{margin-top:16px}
+  #products .single-product{max-width:760px;margin:0 auto}
+  .prod{background:var(--white);border-radius:18px;overflow:hidden;box-shadow:0 12px 34px -20px rgba(60,45,20,.3);display:flex;flex-direction:column}
+  .prod .shot{height:220px;background:#EBDFC6}
+  .prod .body{padding:36px 38px;display:flex;flex-direction:column;flex:1}
+  .prod h3{font-size:24px}
+  .prod .desc{margin:12px 0 22px;font-size:17px;line-height:1.6;color:var(--muted)}
+  .feats{display:flex;flex-direction:column;gap:12px}
+  .feat{display:flex;align-items:center;gap:12px;font-size:16px}
+  .tick{flex:none;width:22px;height:22px;border-radius:50%;background:var(--amber);color:#3A2C10;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .prod .btn{margin-top:26px;text-align:center;align-self:center}
+  #contact{background:var(--brown);padding:96px 24px}
+  #contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  #contact h2{font-size:38px;line-height:1.25;color:#FBF6EC;margin-top:18px}
+  #contact .eyebrow{color:var(--amber-lt)}
+  .steps{display:flex;flex-direction:column;gap:14px;margin-top:32px}
+  .step{display:flex;align-items:center;gap:14px}
+  .num{flex:none;width:26px;height:26px;border-radius:50%;background:rgba(245,200,119,.18);color:var(--amber-lt);font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .step span+span{font-size:18px;font-weight:600;color:#EFE4D2}
+  .form{background:var(--white);border-radius:18px;padding:40px 38px;box-shadow:0 24px 50px -20px rgba(0,0,0,.45)}
+  .who{display:flex;align-items:center;gap:14px;padding-bottom:22px;border-bottom:1px solid #EDE7DC}
+  .avatar{flex:none;width:48px;height:48px;border-radius:50%;overflow:hidden;background:#EBDFC6}
+  .avatar .ph{font-size:10px}
+  .who .nm{font-size:17px;font-weight:800}
+  .who .sub{margin-top:2px;font-size:14px;color:var(--faint)}
+  .form h3{margin:24px 0 6px;font-size:22px}
+  .form .hint{margin-bottom:24px;font-size:15px;line-height:1.6;color:var(--muted)}
+  .form label{display:block}
+  .form input,.form textarea{width:100%;font-family:inherit;font-size:15px;color:var(--ink);border:1px solid var(--card-line);border-radius:10px;padding:14px 16px;background:var(--white);margin-bottom:12px}
+  .form textarea{min-height:104px;resize:vertical}
+  .form input:focus,.form textarea:focus{outline:none;border-color:var(--amber);box-shadow:0 0 0 3px rgba(235,174,74,.18)}
+  .form .btn{width:100%;border-radius:10px;padding:17px 0}
+  .fine{margin-top:16px;font-size:13px;line-height:1.5;text-align:center;color:var(--faint)}
+  footer{background:#3A2A18;color:#C6B69C;padding:40px 24px;text-align:center;font-size:14px}
+  @media (max-width:900px){
+    :root{--pad:72px}
+    h1{font-size:40px}
+    h2{font-size:32px}
+    .lead{font-size:19px}
+    #story p{font-size:18px}
+    #principles .head p{font-size:21px}
+    #contact h2{font-size:30px}
+    .grid3,.grid2,#contact .wrap{grid-template-columns:1fr;gap:24px}
+    .prod .body,.form{padding:28px 24px}
+    .btn{width:100%;text-align:center;padding:17px 24px}
+    .btn-ghost{width:auto}
+    #hero .cta-row{flex-direction:column;align-items:stretch}
+  }
+  @media (max-width:520px){
+    :root{--pad:56px}
+    h1{font-size:27px}
+    h2{font-size:27px}
+    section{padding:var(--pad) 20px}
+  }
+  .hani-story{background:#fff;padding:110px 24px;text-align:center}
+  .story-wrap{max-width:820px;margin:0 auto}
+  .story-eyebrow{font-size:14px;font-weight:800;letter-spacing:3px;color:#C0512F;margin:0 0 20px}
+  .hani-story h2{font-size:44px;line-height:1.2;margin:0 0 55px}
+  .story-content{max-width:700px;margin:0 auto}
+  .story-content p{font-size:18px;line-height:1.8;color:#6B6151;margin:0 0 30px}
+  .story-content strong{color:#2B2622;font-weight:800}
+  .story-ending{margin-top:45px !important;padding-top:32px;border-top:1px solid #E7D8BE}
+  @media (max-width:700px){.hani-story{padding:75px 22px}.hani-story h2{font-size:34px;margin-bottom:40px}.story-content p{font-size:17px}}
+
+#resources-hero{background:var(--cream);text-align:center;padding:84px 24px 76px}
+#resources-hero .lead{max-width:680px;margin:20px auto 0}
+#resources-hero h1{font-size:50px;white-space:normal}
+.resource-section{background:var(--white);padding:72px 24px 96px}
+.resource-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;max-width:960px;margin:auto}
+.resource-card{border:1px solid var(--card-line);background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 12px 32px -22px rgba(60,45,20,.3)}
+.resource-cover{min-height:230px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:25px;background:#F4E5C8;color:var(--brown)}
+.resource-cover.alt{background:#EEE3DC}
+.resource-cover .small{font-weight:700;letter-spacing:.17em;text-transform:uppercase;font-size:12px;color:#916A31}
+.resource-cover .big{font-size:28px;font-weight:800;line-height:1.2;margin-top:13px}
+.resource-content{padding:30px;display:flex;flex:1;flex-direction:column;align-items:flex-start;gap:14px}
+.resource-content p{font-size:16px;line-height:1.65;color:var(--muted)}
+.resource-content .btn{margin-top:auto;font-size:16px;padding:15px 26px}
+.resource-tag{font-size:13px;font-weight:700;color:var(--terra)}
+.soon{background:#F1EEE8;color:#766B5D;display:inline-block;padding:13px 22px;border-radius:999px;font-weight:700;margin-top:auto}
+.resource-book{background:var(--cream);padding:72px 24px 88px;text-align:center}
+.resource-book .wrap{max-width:760px}
+.resource-book h2{font-size:36px;margin:13px 0 20px}
+.resource-book p{font-size:18px;color:var(--muted);line-height:1.6;margin:0 auto 30px;max-width:600px}
+.resource-book .btn{font-size:17px}
+@media(max-width:700px){#resources-hero{padding:65px 20px 56px}#resources-hero h1{font-size:34px}.resource-section{padding:50px 20px 64px}.resource-grid{grid-template-columns:1fr}.resource-cover{min-height:200px}.resource-book h2{font-size:28px}.resource-content{padding:26px}.resource-content .btn{width:100%}}
+</style>
+</head>
+<body>
+<nav style="background:#FAF4E7; padding:22px 24px; border-bottom:1px solid #E7D8BE;">
+  <div style="max-width:1120px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:25px; flex-wrap:wrap;">
+    <a href="index.html" style="font-size:20px; font-weight:800; color:#2B2622;">Hani, Speaking</a>
+    <div style="display:flex; gap:20px; align-items:center; flex-wrap:wrap;">
+      <a href="index.html" style="color:#4F4740;">Home</a>
+      <a href="resources.html" style="color:#4F4740;font-weight:700;">Free Resources</a>
+      <a href="book.html" style="color:#4F4740;">Book</a>
+      <a href="https://app.notion.com/p/2e80a97a3e9d80cf93f9c2606305b9df?pvs=204" target="_blank" rel="noopener noreferrer" style="color:#4F4740;">Lessons ↗</a>
+    </div>
+  </div>
+</nav>
+<main>
+<section id="resources-hero"><div class="wrap">
+  <span class="eyebrow">Hani, Speaking</span>
+  <h1 style="margin-top:19px">Free Korean Resources</h1>
+  <p class="lead">Start with a free guide, discover how Korean works in real life, and bring Korean into your everyday conversations.</p>
+</div></section>
+<section class="resource-section"><div class="resource-grid">
+  <article class="resource-card">
+    <div class="resource-cover"><span class="small">Free PDF Guide</span><span class="big">10 Everyday<br>Korean Patterns</span></div>
+    <div class="resource-content">
+      <span class="resource-tag">AVAILABLE NOW · FREE PDF</span>
+      <h3>10 Free Korean Patterns</h3>
+      <p>Discover practical patterns that help you sound more natural in everyday Korean.</p>
+      <a class="btn" href="https://hanispeaking.eo.page/9nt4v" target="_blank" rel="noopener noreferrer">Get the Free Guide ↗</a>
+    </div>
+  </article>
+  <article class="resource-card">
+    <div class="resource-cover alt"><span class="small">Korean Culture</span><span class="big">3 Things to Know<br>About Korean Culture</span></div>
+    <div class="resource-content">
+      <span class="resource-tag">COMING SOON</span>
+      <h3>3 Korean Culture Essentials</h3>
+      <p>Explore cultural ideas that help you understand Korean expressions and conversations in context.</p>
+      <span class="soon" aria-label="This guide is not yet available">Coming soon</span>
+    </div>
+  </article>
+</div></section>
+<section class="resource-book"><div class="wrap">
+  <span class="eyebrow">Real Korean Patterns Book 1</span>
+  <h2>Ready to practice more?</h2>
+  <p>Go beyond the free guides with 30 everyday Korean patterns, real-life examples, speaking practice, and audio.</p>
+  <a class="btn" href="book.html">Explore the Book →</a>
+</div></section>
+</main>
+<footer>© 2026 Hani, Speaking · <a href="mailto:amazingkoreanspeaking@gmail.com?subject=Hani%20Speaking%20Inquiry" style="color:#F5C877">Email Hani</a> · <a href="https://payhip.com/KoreanHani" style="color:#F5C877">Store</a></footer>
+</body></html>

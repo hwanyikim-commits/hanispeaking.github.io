@@ -4,7 +4,7 @@ subtitle: "A short reaction that shows you really heard someone's story"
 description: "Learn how Koreans react with -았/었겠어(요), see natural example sentences and conversations, compare it with -았/었을 것 같아요, and find out when it sounds strange."
 category: "Patterns"
 date: "2026-10-15"
-read_time: "6"
+read_time: "7"
 image: "../images/korean-patterns-must-have-been.webp"
 ---
 
@@ -139,6 +139,32 @@ Finally, think of a story a friend told you recently. How would you react to it 
 
 Next time a Korean friend tells you about their day, try reacting with **-았/었겠어요** before you ask a question. The conversation will feel much warmer.
 
+## 7. 같은 이야기, 다섯 가지 반응 / One story, five reactions
+
+그런데 한국 사람들이 리액션할 때 **-았/었겠어요**만 쓰는 건 아니에요. 친구가 이렇게 말했다고 해 볼게요.
+
+But Koreans don't react with **-았/었겠어요** every time. Imagine your friend tells you this:
+
+[dialogue] FRIEND || **아침 7시에 새로 생긴 빵집에 갔는데, 한 시간 줄 서고 내 앞에서 빵이 다 떨어졌어.** || I went to the new bakery at 7 a.m., waited in line for an hour, and the bread sold out right before my turn.
+
+아래 다섯 문장은 모두 이 이야기에 대한 **자연스러운 반응**이에요.
+
+All five of these are natural reactions to the same story.
+
+1. 한 시간이나? 진짜 허무했겠다. **(-았/었겠어요)**
+2. 아침도 못 먹었을 텐데 같이 밥 먹으러 갈래? **(-(으)ㄹ 텐데)**
+3. 와, 그 빵집 진짜 인기 많네. **(-네요)**
+4. 아, 그래서 아침에 전화를 안 받았구나. **(-구나/군요)**
+5. 나도 지난주에 갔는데 줄이 엄청 길더라. **(-더라/더라고요)**
+
+같은 이야기를 들었는데 왜 어떤 반응은 **-겠어요**이고, 어떤 반응은 **-네요**나 **-더라고요**일까요? 이 차이를 모르면 문법은 맞아도 대답이 조금씩 어긋나게 들려요.
+
+Why is one reaction **-겠어요** and another **-네요** or **-더라고요**? If you don't know the difference, your answer can be grammatically correct but still sound a little off.
+
+다섯 표현 모두 **Real Korean Patterns Book 1**의 Part 3 *Reacting and Realizing*에 있어요. 각 표현을 언제 고르는지 실제 상황으로 하나씩 연습할 수 있어요.
+
+All five are in Part 3, *Reacting and Realizing*, of **Real Korean Patterns Book 1**, where you practice when to choose each one through real-life situations.
+
 @amazing_korean_speaking
 
-[book] Real Korean Patterns · Book 1 || -았/었겠어(요) is one of 30 everyday expressions in my book. Each unit shows you when Koreans really use the expression, with model examples, short dialogues, and the cultural feeling behind it. Audio for every Korean sentence is included. || Get the book · $15 || ../book.html
+[book] Real Korean Patterns · Book 1 || This post covers one pattern. The book has 30, including all five reactions above. Every unit gives you real-life situations, short A·B dialogues, the cultural feeling behind the expression, and audio for the Korean examples and dialogues. Comparison tables at the end help you pick the right one fast. || Get the book · $19 || ../book.html

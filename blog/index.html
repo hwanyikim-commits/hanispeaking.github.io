@@ -55,7 +55,7 @@ button,input{font:inherit}
 .card{background:white;border:1px solid #E9E2D8;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-height:100%;box-shadow:0 8px 24px rgba(70,50,20,.06);transition:transform .18s ease,box-shadow .18s ease}
 .card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(70,50,20,.10)}
 .thumb{aspect-ratio:1.65/1;background:#EFE7DC;overflow:hidden}
-.thumb{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:22px 24px;background:linear-gradient(135deg,#F8E9D1,#FFF9EF);color:#49331F}.thumb-life{background:linear-gradient(135deg,#EDE8DE,#FCFAF4);color:#3D453D}.thumb-type{font-size:10px;font-weight:850;letter-spacing:.16em;color:#A86D27}.thumb-life .thumb-type{color:#697761}.thumb-heading{font-family:Georgia,serif;font-size:clamp(22px,2.5vw,32px);font-weight:700;line-height:1.08;letter-spacing:-.025em;margin:11px 0}.thumb-caption{font-size:11px;line-height:1.5;color:#756452}
+.thumb{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:0;background:linear-gradient(135deg,#F8E9D1,#FFF9EF);color:#49331F}.thumb-pattern img{width:100%;height:100%;object-fit:cover}.thumb-life{padding:22px 24px;background:linear-gradient(135deg,#EDE8DE,#FCFAF4);color:#3D453D}.thumb-type{font-size:10px;font-weight:850;letter-spacing:.16em;color:#A86D27}.thumb-life .thumb-type{color:#697761}.thumb-heading{font-family:Georgia,serif;font-size:clamp(22px,2.5vw,32px);font-weight:700;line-height:1.08;letter-spacing:-.025em;margin:11px 0}.thumb-caption{font-size:11px;line-height:1.5;color:#756452}
 .card-body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
 .category{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-dark);font-weight:900;margin-bottom:9px}
 .card h2{font-family:Georgia,'Times New Roman',serif;font-size:22px;line-height:1.15;letter-spacing:-.018em;margin:0 0 10px}
@@ -264,7 +264,7 @@ function render(){
   }else{
     grid.innerHTML = visible.map(post => `
       <a class="card" href="post.html?file=${encodeURIComponent(post.filename)}">
-        <div class="thumb ${post.category === 'Korean in Real Life' ? 'thumb-life' : 'thumb-pattern'}"><div class="thumb-type">${post.category === 'Korean in Real Life' ? 'KOREAN IN REAL LIFE' : 'REAL KOREAN PATTERNS'}</div><div class="thumb-heading">${post.category === 'Korean in Real Life' ? 'Korean in<br>Real Life' : 'Korean Patterns'}</div><div class="thumb-caption">${post.category === 'Korean in Real Life' ? 'Culture · Context · Communication' : 'Speak the way Koreans actually do'}</div></div>
+        <div class="thumb ${post.category === 'Korean in Real Life' ? 'thumb-life' : 'thumb-pattern'}">${post.category === 'Korean in Real Life' ? '<div class="thumb-type">KOREAN IN REAL LIFE</div><div class="thumb-heading">Korean in<br>Real Life</div><div class="thumb-caption">Culture · Context · Communication</div>' : `<img src="${escapeHtml(post.image)}" alt="">`}</div>
         <div class="card-body">
           <div class="category">${escapeHtml(post.category)}</div>
           <h2>${escapeHtml(post.title)}</h2>

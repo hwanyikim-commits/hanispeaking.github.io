@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>우리집 물건 찾기</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF4E7; --white:#fff; --ink:#2B2622; --body:#4F4740; --muted:#6B6151; --faint:#8A8172;
+    --amber:#EBAE4A; --amber-dk:#C68A2E; --line:#E3DBCC;
+    --ok:#2E7D4F; --ok-bg:#E5F3EA; --low:#A86A12; --low-bg:#FCF0D9; --out:#B23B2A; --out-bg:#FBE4E0;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}
+  button,input,select,textarea{font:inherit;color:inherit}
+  .wrap{max-width:760px;margin:0 auto;padding:20px 16px 120px}
+  h1{font-size:24px;font-weight:800;margin:4px 0 4px}
+  .sub{color:var(--muted);font-size:14px;margin:0 0 16px}
+
+  .search{position:sticky;top:0;z-index:5;background:var(--cream);padding:8px 0 10px}
+  .search input{width:100%;padding:14px 16px;font-size:17px;border:2px solid var(--line);border-radius:14px;background:var(--white);outline:none}
+  .search input:focus{border-color:var(--amber)}
+
+  .tabs{display:flex;gap:6px;margin:6px 0 0;flex-wrap:wrap}
+  .chip{border:1px solid var(--line);background:var(--white);padding:7px 14px;border-radius:999px;font-size:14px;font-weight:600;cursor:pointer;color:var(--body)}
+  .chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+  .filters{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+  .filters select{padding:7px 10px;border:1px solid var(--line);border-radius:10px;background:var(--white);font-size:14px}
+
+  .count{font-size:13px;color:var(--faint);margin:12px 2px 8px}
+  .group{margin:18px 0 6px;font-size:13px;font-weight:700;color:var(--amber-dk);letter-spacing:.02em}
+
+  .item{display:flex;gap:12px;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:8px}
+  .item .main{flex:1;min-width:0;cursor:pointer}
+  .item .name{font-size:17px;font-weight:700;word-break:keep-all}
+  .item .loc{font-size:14px;color:var(--body);margin-top:3px}
+  .item .loc b{font-weight:700;color:var(--ink)}
+  .item .memo{font-size:13px;color:var(--faint);margin-top:3px}
+  .stock{border:none;border-radius:10px;padding:8px 10px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;min-width:64px;text-align:center}
+  .stock.ok{background:var(--ok-bg);color:var(--ok)}
+  .stock.low{background:var(--low-bg);color:var(--low)}
+  .stock.out{background:var(--out-bg);color:var(--out)}
+  mark{background:#FFE6A6;color:inherit;border-radius:3px;padding:0 1px}
+
+  .empty{text-align:center;color:var(--muted);padding:40px 10px;line-height:1.7}
+
+  .fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));background:var(--amber);color:var(--ink);border:none;border-radius:999px;padding:15px 22px;font-size:16px;font-weight:800;box-shadow:0 6px 18px rgba(0,0,0,.18);cursor:pointer}
+
+  .tools{margin-top:28px;padding-top:16px;border-top:1px dashed var(--line);display:flex;gap:8px;flex-wrap:wrap}
+  .tools button,.tools label{border:1px solid var(--line);background:var(--white);border-radius:10px;padding:8px 12px;font-size:13px;cursor:pointer;color:var(--body)}
+  .note{font-size:12px;color:var(--faint);margin-top:10px;line-height:1.6}
+
+  dialog{border:none;border-radius:18px;padding:0;width:min(520px,94vw);box-shadow:0 20px 60px rgba(0,0,0,.25)}
+  dialog::backdrop{background:rgba(43,38,34,.45)}
+  form.sheet{padding:20px}
+  .sheet h2{font-size:19px;margin:0 0 14px}
+  .field{margin-bottom:12px}
+  .field > span{display:block;font-size:13px;font-weight:700;color:var(--muted);margin-bottom:5px}
+  .field input,.field select,.field textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:16px}
+  .row{display:flex;gap:8px}
+  .row > *{flex:1}
+  .seg{display:flex;gap:6px}
+  .seg label{flex:1}
+  .seg input{display:none}
+  .seg span{display:block;text-align:center;padding:10px 6px;border:1px solid var(--line);border-radius:10px;font-weight:700;font-size:14px;cursor:pointer;background:#fff}
+  .seg input:checked + span{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .actions{display:flex;gap:8px;margin-top:16px}
+  .actions button{flex:1;padding:12px;border-radius:12px;border:1px solid var(--line);background:#fff;font-weight:700;cursor:pointer}
+  .actions .primary{background:var(--amber);border-color:var(--amber)}
+  .actions .danger{color:var(--out);flex:0 0 auto}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>우리집 물건 찾기</h1>
+  <p class="sub">물건 이름으로 검색하면 <b>재고</b>와 <b>위치</b>가 바로 나와요.</p>
+
+  <div class="search">
+    <input id="q" type="search" placeholder="🔍 무엇을 찾나요? (예: 건전지, 가위)" autocomplete="off">
+    <div class="tabs" id="unitTabs"></div>
+    <div class="filters">
+      <select id="fSpace" aria-label="공간"></select>
+      <select id="fStock" aria-label="재고">
+        <option value="">재고 전체</option>
+        <option value="ok">있음</option>
+        <option value="low">조금 남음</option>
+        <option value="out">없음 (사야 함)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="count" id="count"></div>
+  <div id="list"></div>
+
+  <div class="tools">
+    <button type="button" id="exportBtn">백업 내보내기</button>
+    <label>백업 불러오기<input type="file" id="importFile" accept="application/json" hidden></label>
+    <button type="button" id="shoppingBtn">사야 할 것 목록 복사</button>
+  </div>
+  <p class="note">
+    데이터는 이 기기의 브라우저에만 저장돼요 (인터넷에 올라가지 않아요).<br>
+    다른 폰에서도 보려면 “백업 내보내기” 파일을 보내서 “백업 불러오기”로 넣어주세요.<br>
+    재고 버튼을 누르면 있음 → 조금 남음 → 없음 순서로 바뀌어요.
+  </p>
+</div>
+
+<button class="fab" id="addBtn" type="button">＋ 물건 추가</button>
+
+<dialog id="dlg">
+  <form class="sheet" id="form" method="dialog">
+    <h2 id="dlgTitle">물건 추가</h2>
+    <label class="field"><span>물건 이름</span>
+      <input name="name" required placeholder="예: AA 건전지" autocomplete="off">
+    </label>
+    <div class="field"><span>재고</span>
+      <div class="seg">
+        <label><input type="radio" name="stock" value="ok" checked><span>있음</span></label>
+        <label><input type="radio" name="stock" value="low"><span>조금 남음</span></label>
+        <label><input type="radio" name="stock" value="out"><span>없음</span></label>
+      </div>
+    </div>
+    <div class="row">
+      <label class="field"><span>호</span>
+        <select name="unit"></select>
+      </label>
+      <label class="field"><span>공간</span>
+        <input name="space" list="spaceList" value="거실" autocomplete="off">
+      </label>
+    </div>
+    <div class="row">
+      <label class="field"><span>정리함</span>
+        <input name="box" list="boxList" placeholder="예: 거실 정리함" autocomplete="off">
+      </label>
+      <label class="field"><span>칸 / 단</span>
+        <input name="slot" list="slotList" placeholder="예: 2단 왼쪽" autocomplete="off">
+      </label>
+    </div>
+    <label class="field"><span>메모 (선택)</span>
+      <input name="memo" placeholder="예: 4개 남음, 다른 이름: 배터리" autocomplete="off">
+    </label>
+    <div class="actions">
+      <button type="button" class="danger" id="delBtn">삭제</button>
+      <button type="button" id="cancelBtn">취소</button>
+      <button type="submit" class="primary">저장</button>
+    </div>
+  </form>
+</dialog>
+<datalist id="spaceList"></datalist>
+<datalist id="boxList"></datalist>
+<datalist id="slotList"></datalist>
+
+<script>
+(function(){
+  const KEY = 'home-storage-v1';
+  const UNITS = ['1호', '2호'];
+  const STOCK = { ok: '있음', low: '조금 남음', out: '없음' };
+  const NEXT = { ok: 'low', low: 'out', out: 'ok' };
+
+  let items = load();
+  let unitFilter = '';           // '' = 전체
+  let editingId = null;
+
+  const $ = s => document.querySelector(s);
+  const q = $('#q'), list = $('#list'), form = $('#form'), dlg = $('#dlg');
+
+  function load(){
+    try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch(e){ return []; }
+  }
+  function save(){ localStorage.setItem(KEY, JSON.stringify(items)); }
+  function uid(){ return Date.now().toString(36) + Math.random().toString(36).slice(2,7); }
+  function esc(s){ return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+  function norm(s){ return String(s ?? '').toLowerCase().replace(/\s+/g, ''); }
+  function uniq(key){ return [...new Set(items.map(i => i[key]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ko')); }
+
+  function highlight(text, term){
+    const t = esc(text);
+    if (!term) return t;
+    const i = String(text).toLowerCase().indexOf(term.toLowerCase());
+    if (i < 0) return t;
+    return esc(text.slice(0,i)) + '<mark>' + esc(text.slice(i, i+term.length)) + '</mark>' + esc(text.slice(i+term.length));
+  }
+
+  function renderTabs(){
+    const tabs = [['', '전체'], ...UNITS.map(u => [u, u])];
+    $('#unitTabs').innerHTML = tabs.map(([v,l]) =>
+      `<button type="button" class="chip${unitFilter===v?' on':''}" data-unit="${esc(v)}">${esc(l)} <small>${v ? items.filter(i=>i.unit===v).length : items.length}</small></button>`
+    ).join('');
+  }
+
+  function renderFilters(){
+    const fs = $('#fSpace'), cur = fs.value;
+    fs.innerHTML = '<option value="">공간 전체</option>' + uniq('space').map(s => `<option${s===cur?' selected':''}>${esc(s)}</option>`).join('');
+    $('#spaceList').innerHTML = ['거실', ...uniq('space')].filter((v,i,a)=>a.indexOf(v)===i).map(s=>`<option value="${esc(s)}">`).join('');
+    $('#boxList').innerHTML = uniq('box').map(s=>`<option value="${esc(s)}">`).join('');
+    $('#slotList').innerHTML = uniq('slot').map(s=>`<option value="${esc(s)}">`).join('');
+  }
+
+  function render(){
+    renderTabs();
+    renderFilters();
+    const term = q.value.trim();
+    const nt = norm(term);
+    const space = $('#fSpace').value, stock = $('#fStock').value;
+
+    const shown = items.filter(i =>
+      (!unitFilter || i.unit === unitFilter) &&
+      (!space || i.space === space) &&
+      (!stock || i.stock === stock) &&
+      (!nt || norm([i.name, i.memo, i.box, i.slot, i.space, i.unit].join(' ')).includes(nt))
+    ).sort((a,b) =>
+      // 이름이 검색어로 시작하는 것 먼저, 그다음 위치 순
+      (nt ? (norm(b.name).startsWith(nt) - norm(a.name).startsWith(nt)) : 0) ||
+      a.unit.localeCompare(b.unit,'ko') || (a.space||'').localeCompare(b.space||'','ko') ||
+      (a.box||'').localeCompare(b.box||'','ko') || (a.slot||'').localeCompare(b.slot||'','ko') ||
+      a.name.localeCompare(b.name,'ko')
+    );
+
+    $('#count').textContent = items.length
+      ? (term ? `“${term}” 검색 결과 ${shown.length}개` : `${shown.length}개 물건`)
+      : '';
+
+    if (!items.length){
+      list.innerHTML = `<div class="empty">아직 등록된 물건이 없어요.<br>오른쪽 아래 <b>＋ 물건 추가</b>로<br>거실 정리함부터 하나씩 넣어보세요.</div>`;
+      return;
+    }
+    if (!shown.length){
+      list.innerHTML = `<div class="empty">“${esc(term)}”을(를) 찾지 못했어요.<br>다른 이름으로 검색하거나 새로 추가해 주세요.</div>`;
+      return;
+    }
+
+    let html = '', lastGroup = null;
+    for (const i of shown){
+      const group = `${i.unit} · ${i.space || '공간 미지정'}${i.box ? ' · ' + i.box : ''}`;
+      if (!term && group !== lastGroup){ html += `<div class="group">${esc(group)}</div>`; lastGroup = group; }
+      const loc = [i.unit, i.space, i.box, i.slot].filter(Boolean);
+      html += `<div class="item">
+        <div class="main" data-edit="${i.id}">
+          <div class="name">${highlight(i.name, term)}</div>
+          <div class="loc">📍 <b>${esc(loc[0])}</b> ${loc.slice(1).map(esc).join(' › ')}</div>
+          ${i.memo ? `<div class="memo">${highlight(i.memo, term)}</div>` : ''}
+        </div>
+        <button type="button" class="stock ${i.stock}" data-stock="${i.id}" title="눌러서 재고 변경">${STOCK[i.stock]}</button>
+      </div>`;
+    }
+    list.innerHTML = html;
+  }
+
+  function openForm(item){
+    editingId = item ? item.id : null;
+    $('#dlgTitle').textContent = item ? '물건 수정' : '물건 추가';
+    $('#delBtn').style.display = item ? '' : 'none';
+    form.unit.innerHTML = UNITS.map(u => `<option>${u}</option>`).join('');
+    const last = items[items.length-1] || {};
+    const d = item || { name: q.value.trim(), stock: 'ok',
+      unit: unitFilter || last.unit || UNITS[0], space: last.space || '거실', box: last.box || '거실 정리함', slot: last.slot || '', memo: '' };
+    form.name.value = d.name; form.unit.value = d.unit; form.space.value = d.space || '';
+    form.box.value = d.box || ''; form.slot.value = d.slot || ''; form.memo.value = d.memo || '';
+    form.querySelector(`input[name=stock][value=${d.stock}]`).checked = true;
+    dlg.showModal();
+    setTimeout(() => form.name.focus(), 50);
+  }
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const data = {
+      name: form.name.value.trim(), stock: form.stock.value, unit: form.unit.value,
+      space: form.space.value.trim(), box: form.box.value.trim(), slot: form.slot.value.trim(),
+      memo: form.memo.value.trim(), updated: new Date().toISOString()
+    };
+    if (!data.name) return;
+    if (editingId){ Object.assign(items.find(i => i.id === editingId), data); }
+    else { items.push({ id: uid(), ...data }); }
+    save(); dlg.close(); render();
+  });
+  $('#cancelBtn').onclick = () => dlg.close();
+  $('#delBtn').onclick = () => {
+    const it = items.find(i => i.id === editingId);
+    if (it && confirm(`“${it.name}”을(를) 삭제할까요?`)){
+      items = items.filter(i => i.id !== editingId); save(); dlg.close(); render();
+    }
+  };
+
+  list.addEventListener('click', e => {
+    const s = e.target.closest('[data-stock]');
+    if (s){ const it = items.find(i => i.id === s.dataset.stock); it.stock = NEXT[it.stock]; it.updated = new Date().toISOString(); save(); render(); return; }
+    const m = e.target.closest('[data-edit]');
+    if (m) openForm(items.find(i => i.id === m.dataset.edit));
+  });
+  $('#unitTabs').addEventListener('click', e => {
+    const c = e.target.closest('[data-unit]'); if (!c) return;
+    unitFilter = c.dataset.unit; render();
+  });
+  q.addEventListener('input', render);
+  $('#fSpace').addEventListener('change', render);
+  $('#fStock').addEventListener('change', render);
+  $('#addBtn').onclick = () => openForm(null);
+
+  $('#exportBtn').onclick = () => {
+    const blob = new Blob([JSON.stringify({ version: 1, exported: new Date().toISOString(), items }, null, 2)], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `우리집물건_${new Date().toISOString().slice(0,10)}.json`;
+    a.click(); URL.revokeObjectURL(a.href);
+  };
+  $('#importFile').onchange = async e => {
+    const f = e.target.files[0]; if (!f) return;
+    try {
+      const data = JSON.parse(await f.text());
+      const incoming = (Array.isArray(data) ? data : data.items || []).filter(i => i && i.name);
+      if (!confirm(`${incoming.length}개 물건을 불러올까요?\n(같은 물건은 새 정보로 바뀌고, 나머지는 유지돼요)`)) return;
+      const byId = new Map(items.map(i => [i.id, i]));
+      for (const i of incoming){
+        const it = { id: i.id || uid(), name: String(i.name), stock: STOCK[i.stock] ? i.stock : 'ok',
+          unit: UNITS.includes(i.unit) ? i.unit : UNITS[0], space: i.space || '', box: i.box || '',
+          slot: i.slot || '', memo: i.memo || '', updated: i.updated || '' };
+        const cur = byId.get(it.id);
+        if (!cur || (it.updated || '') >= (cur.updated || '')) byId.set(it.id, it);
+      }
+      items = [...byId.values()]; save(); render();
+    } catch(err){ alert('파일을 읽을 수 없어요. 백업 파일(.json)이 맞는지 확인해 주세요.'); }
+    e.target.value = '';
+  };
+  $('#shoppingBtn').onclick = async () => {
+    const need = items.filter(i => i.stock !== 'ok');
+    if (!need.length){ alert('사야 할 물건이 없어요 👍'); return; }
+    const text = '🛒 사야 할 것\n' + need.map(i => `- ${i.name} (${i.unit}, ${STOCK[i.stock]})`).join('\n');
+    try { await navigator.clipboard.writeText(text); alert('복사했어요! 카톡 등에 붙여넣기 하세요.\n\n' + text); }
+    catch(e){ prompt('아래 내용을 복사하세요', text); }
+  };
+
+  render();
+})();
+</script>
+</body>
+</html>

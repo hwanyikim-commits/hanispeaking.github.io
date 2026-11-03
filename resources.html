@@ -165,22 +165,6 @@
 .resource-book p{font-size:18px;color:var(--muted);line-height:1.6;margin:0 auto 30px;max-width:600px}
 .resource-book .btn{font-size:17px}
 @media(max-width:700px){#resources-hero{padding:65px 20px 56px}#resources-hero h1{font-size:34px}.resource-section{padding:50px 20px 64px}.resource-grid{grid-template-columns:1fr}.resource-cover{min-height:200px}.resource-book h2{font-size:28px}.resource-content{padding:26px}.resource-content .btn{width:100%}}
-/* PDF preview window */
-.pdf-modal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:28px;background:rgba(43,38,34,.62)}
-.pdf-modal.open{display:flex}
-.pdf-box{background:#fff;border-radius:18px;width:100%;max-width:900px;height:100%;max-height:920px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 30px 70px -20px rgba(0,0,0,.45)}
-.pdf-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 18px 16px 24px;border-bottom:1px solid var(--card-line)}
-.pdf-head h3{font-size:18px;line-height:1.3}
-.pdf-close{flex-shrink:0;width:40px;height:40px;border:none;border-radius:50%;background:var(--gray);color:var(--ink);font-size:22px;line-height:1;cursor:pointer;font-family:inherit}
-.pdf-close:hover{background:#ECE7DE}
-.pdf-frame{flex:1;position:relative;background:#F1EEE8}
-.pdf-frame .loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--faint)}
-.pdf-frame iframe{position:relative;width:100%;height:100%;border:0;display:block}
-.pdf-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 18px 14px 24px;border-top:1px solid var(--card-line)}
-.pdf-foot p{font-size:14px;color:var(--muted)}
-.pdf-foot .btn{font-size:16px;padding:13px 26px;box-shadow:none}
-body.pdf-open{overflow:hidden}
-@media(max-width:700px){.pdf-modal{padding:0}.pdf-box{border-radius:0;max-height:none}.pdf-head{padding:12px 12px 12px 18px}.pdf-head h3{font-size:16px}.pdf-foot{padding:12px 14px}.pdf-foot p{display:none}.pdf-foot .btn{width:100%;text-align:center}}
 </style>
 </head>
 <body>
@@ -244,8 +228,8 @@ body.pdf-open{overflow:hidden}
     <div class="resource-content">
       <span class="resource-tag">FREE PDF · KOREAN CULTURE</span>
       <h3>3 Korean Culture Essentials</h3>
-      <p>Learn how 눈치, 겸손, and 정 help you understand Korean people and everyday expressions.</p>
-      <a class="btn js-pdf" href="https://drive.google.com/file/d/1flFWB65lFTpESzryzVgj5ruP92NckUzg/view" target="_blank" rel="noopener noreferrer" data-pdf-id="1flFWB65lFTpESzryzVgj5ruP92NckUzg" data-pdf-title="3 Korean Culture Essentials" aria-label="Open three Korean culture essentials PDF">Open Free PDF →</a>
+      <p>Learn how 눈치, 겸손, and 정 help you understand Korean people and everyday expressions. Read it online or download the PDF.</p>
+      <a class="btn" href="korean-culture.html" aria-label="Open free Korean culture essentials guide">Open Free Guide →</a>
     </div>
   </article>
   <article class="resource-card">
@@ -272,54 +256,5 @@ body.pdf-open{overflow:hidden}
   <a class="btn" href="book.html?v=20261011a">Explore the Book →</a>
 </div></section>
 </main>
-<div class="pdf-modal" id="pdfModal" role="dialog" aria-modal="true" aria-labelledby="pdfTitle" hidden>
-  <div class="pdf-box">
-    <div class="pdf-head">
-      <h3 id="pdfTitle">Free PDF</h3>
-      <button class="pdf-close" type="button" aria-label="Close">&times;</button>
-    </div>
-    <div class="pdf-frame">
-      <div class="loading">Loading PDF…</div>
-      <iframe title="PDF preview" allow="autoplay"></iframe>
-    </div>
-    <div class="pdf-foot">
-      <p>Want to keep it? Save this PDF to your device.</p>
-      <a class="btn" id="pdfDownload" href="#" target="_blank" rel="noopener noreferrer">Download PDF ↓</a>
-    </div>
-  </div>
-</div>
-<script>
-(function(){
-  var modal=document.getElementById('pdfModal');
-  if(!modal) return;
-  var frame=modal.querySelector('iframe'), title=document.getElementById('pdfTitle'),
-      dl=document.getElementById('pdfDownload'), closeBtn=modal.querySelector('.pdf-close'), lastBtn=null;
-  function openPdf(id,name,btn){
-    lastBtn=btn;
-    title.textContent=name||'Free PDF';
-    var src='https://drive.google.com/file/d/'+id+'/preview';
-    if(frame.getAttribute('src')!==src) frame.setAttribute('src',src);
-    dl.href='https://drive.google.com/uc?export=download&id='+id;
-    dl.setAttribute('aria-label','Download '+(name||'PDF'));
-    modal.hidden=false; modal.classList.add('open');
-    document.body.classList.add('pdf-open');
-    closeBtn.focus();
-  }
-  function closePdf(){
-    modal.classList.remove('open'); modal.hidden=true;
-    document.body.classList.remove('pdf-open');
-    if(lastBtn) lastBtn.focus();
-  }
-  document.querySelectorAll('.js-pdf').forEach(function(btn){
-    btn.addEventListener('click',function(e){
-      e.preventDefault();
-      openPdf(btn.getAttribute('data-pdf-id'),btn.getAttribute('data-pdf-title'),btn);
-    });
-  });
-  closeBtn.addEventListener('click',closePdf);
-  modal.addEventListener('click',function(e){ if(e.target===modal) closePdf(); });
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&modal.classList.contains('open')) closePdf(); });
-})();
-</script>
 <footer>© 2026 Hani, Korean · <a href="mailto:amazingkoreanspeaking@gmail.com?subject=Hani%20Speaking%20Inquiry" style="color:#F5C877">Email Hani</a> · <a href="book.html?v=20261011a" style="color:#F5C877">Real Korean Patterns Book 1</a></footer>
 </body></html>
